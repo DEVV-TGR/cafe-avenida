@@ -159,11 +159,11 @@
     }
   };
 
+  /** "/", "/index.html" → "index.html"; "/ementa" (URL sem extensão) ou "/ementa.html" → "ementa.html". */
   function pageName(pathname) {
-    const clean = pathname.replace(/\/$/, "");
-    const last = clean.split("/").pop();
-    if (!last || !last.includes(".")) return "index.html";
-    return last;
+    const last = pathname.replace(/\/$/, "").split("/").pop();
+    if (!last || last === "index" || last === "index.html") return "index.html";
+    return last.includes(".") ? last : `${last}.html`;
   }
 
   function isHistoryNavigation() {

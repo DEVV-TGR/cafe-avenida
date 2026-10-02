@@ -16,7 +16,7 @@
 
   /** URL público da página: com ?lang= só quando o visitante escolheu um idioma (como no hreflang). */
   function pageUrl(cfg, isMenu) {
-    const path = isMenu ? "/ementa.html" : "/";
+    const path = isMenu ? "/ementa" : "/";
     const lang = new URLSearchParams(window.location.search).get("lang");
     return lang ? `${cfg.domain}${path}?lang=${encodeURIComponent(lang)}` : `${cfg.domain}${path}`;
   }
@@ -64,7 +64,7 @@
       url: cfg.domain,
       image: `${cfg.domain}/${cfg.shareImage || cfg.media?.hero?.image}`,
       logo: cfg.logo?.src ? `${cfg.domain}/${cfg.logo.src}` : undefined,
-      hasMenu: `${cfg.domain}/ementa.html`,
+      hasMenu: `${cfg.domain}/ementa`,
       priceRange: cfg.priceRange || undefined,
       servesCuisine: cfg.servesCuisine || undefined,
       sameAs: Object.values(cfg.social || {}).filter(Boolean),

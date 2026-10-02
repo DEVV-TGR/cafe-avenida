@@ -106,7 +106,7 @@ As imagens ficam 30 dias em cache no browser: ao trocar uma foto, usar um **nome
 - Português, inglês e francês. Seletor no header (bandeira + código), com o idioma atual marcado.
 - Primeira visita: idioma do browser; fallback **PT**.
 - Preferência guardada em `localStorage`.
-- Forçar via URL: `?lang=pt` ou `?lang=en` (ex.: `ementa.html?lang=en`).
+- Forçar via URL: `?lang=pt`, `?lang=en` ou `?lang=fr` (ex.: `avenidacafe.pt/ementa?lang=en`).
 
 ---
 
@@ -143,7 +143,7 @@ Ficheiros em `qr/` (`ementa`, `ementa-pt`, `ementa-en` em SVG/PNG). Para imprimi
 
 ## Publicar
 
-- **Vercel (produção):** cada push para o `main` do repositório ligado ao projeto publica o site. O `vercel.json` desliga o build do Vite, publica a raiz, define os cabeçalhos de segurança e de cache e redireciona `www.avenidacafe.pt` para `avenidacafe.pt`. O `.vercelignore` deixa de fora testes, scripts, documentação e ficheiros sem uso.
+- **Vercel (produção):** cada push para o `main` do repositório ligado ao projeto publica o site. Os endereços não têm extensão (`/` e `/ementa`, com `cleanUrls`); os antigos com `.html` redirecionam sozinhos. Nos links internos usar `./` e `ementa`, nunca `index.html`/`ementa.html`. O `vercel.json` desliga o build do Vite, publica a raiz, define os cabeçalhos de segurança e de cache e redireciona `www.avenidacafe.pt` para `avenidacafe.pt`. O `.vercelignore` deixa de fora testes, scripts, documentação e ficheiros sem uso.
 - **Domínio:** `avenidacafe.pt` e `www.avenidacafe.pt` configurados em Vercel → Settings → Domains (DNS no registo do domínio).
 - **Voltar atrás:** Vercel → Deployments → escolher uma versão anterior → *Instant Rollback*.
 - **Netlify / GitHub Pages:** também funcionam sem build (`_headers` e `_redirects` são para o Netlify).

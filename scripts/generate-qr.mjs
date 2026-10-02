@@ -50,9 +50,9 @@ async function main() {
   await mkdir(outDir, { recursive: true });
 
   const targets = [
-    ["ementa", `${domain}/ementa.html`],
-    ["ementa-pt", `${domain}/ementa.html?lang=pt`],
-    ["ementa-en", `${domain}/ementa.html?lang=en`],
+    ["ementa", `${domain}/ementa`],
+    ["ementa-pt", `${domain}/ementa?lang=pt`],
+    ["ementa-en", `${domain}/ementa?lang=en`],
   ];
 
   for (const [name, url] of targets) {

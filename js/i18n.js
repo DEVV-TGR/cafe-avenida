@@ -81,7 +81,7 @@
 
   function updateMenuLinks() {
     document.querySelectorAll("[data-href-ementa]").forEach((a) => {
-      a.href = `ementa.html?lang=${currentLang}`;
+      a.href = `ementa?lang=${currentLang}`;
     });
   }
 

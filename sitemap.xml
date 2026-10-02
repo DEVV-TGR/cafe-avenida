@@ -9,11 +9,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avenidacafe.pt/" />
   </url>
   <url>
-    <loc>https://avenidacafe.pt/ementa.html</loc>
+    <loc>https://avenidacafe.pt/ementa</loc>
     <lastmod>2026-10-02</lastmod>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://avenidacafe.pt/ementa.html?lang=pt" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://avenidacafe.pt/ementa.html?lang=en" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://avenidacafe.pt/ementa.html?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://avenidacafe.pt/ementa.html" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://avenidacafe.pt/ementa?lang=pt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://avenidacafe.pt/ementa?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://avenidacafe.pt/ementa?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avenidacafe.pt/ementa" />
   </url>
 </urlset>

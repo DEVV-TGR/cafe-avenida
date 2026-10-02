@@ -11,12 +11,12 @@
     document.querySelectorAll(".pg-indice__seccao").forEach((link) => {
       const hash = link.getAttribute("data-section-hash");
       if (!hash) return;
-      link.href = isHome ? hash : `index.html${hash}`;
+      link.href = isHome ? hash : `./${hash}`;
     });
 
     const marca = document.querySelector(".pg-barra__marca");
     if (marca) {
-      marca.href = isHome ? "#main" : "index.html";
+      marca.href = isHome ? "#main" : "./";
     }
 
     document.querySelectorAll("[data-phone-display]").forEach((el) => {
