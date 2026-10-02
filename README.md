@@ -127,6 +127,7 @@ Ficheiros em `qr/` (`ementa`, `ementa-pt`, `ementa-en` em SVG/PNG). Para imprimi
 
 - **GitHub Pages:** Settings → Pages → branch `main`, pasta `/ (root)`.
 - **Netlify / similar:** ligar o repositório ou arrastar a pasta; **sem comando de build**.
+- **Vercel:** importar o repositório; o `vercel.json` já desliga o build do Vite e publica a raiz (e repete os cabeçalhos do `_headers`).
 
 Antes de publicar, preencher em `config.js` o `domain`, email e links das redes sociais (ainda há placeholders de exemplo).
 
