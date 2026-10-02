@@ -1,0 +1,38 @@
+# Verificações de segurança: testes (npm test) e auditoria de dependências.
+# Não instala pacotes nem corre scripts de instalação: npm audit lê apenas o package-lock.json.
+name: Segurança
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "17 6 * * 1" # todas as segundas, para apanhar vulnerabilidades novas sem haver commits
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seguranca-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Testes de segurança
+        run: npm test
+      - name: Auditoria de dependências (raiz)
+        run: npm audit --audit-level=moderate
+      - name: Auditoria de dependências (scripts/)
+        run: npm audit --audit-level=moderate
+        working-directory: scripts
