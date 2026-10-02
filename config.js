@@ -21,7 +21,7 @@ window.CAFE_CONFIG = {
     en: "On the Avenida in Alpendurada, the day starts with a well-pulled coffee and ends with snacks among friends. In between, home-style meals, the match on TV and the warmth of people who love to welcome you.", fr: "Sur l’Avenida, à Alpendurada, la journée commence par un bon café et se termine par un en-cas entre amis. Entre les deux, des repas faits maison, le match à la télévision et le plaisir de vous accueillir.",
   },
   /** Email real do café; vazio esconde o contacto (não usar endereços de exemplo: o domínio pode receber o correio). */
-  email: "",
+  email: "avenidacafealp@gmail.com",
   phone: "+351255619414",
   phoneDisplay: "255 619 414",
   address: {
