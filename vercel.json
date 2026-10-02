@@ -80,11 +80,11 @@
   "rewrites": [
     {
       "source": "/:lang(en|fr)",
-      "destination": "/index.html"
+      "destination": "/"
     },
     {
       "source": "/:lang(en|fr)/ementa",
-      "destination": "/ementa.html"
+      "destination": "/ementa"
     },
     {
       "source": "/:lang(en|fr)/:path*",
