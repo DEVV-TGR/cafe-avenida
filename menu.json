@@ -77,7 +77,7 @@
                 "en": "With salad and fries, sweet and sour sauce",
                 "fr": "Avec salade, frites et sauce aigre-douce"
               },
-              "price": 7.5
+              "price": 8.0
             },
             {
               "id": "prego-prato",
@@ -109,7 +109,7 @@
                 "en": "Breaded chicken with rustic potatoes",
                 "fr": "Avec pommes de terre rustiques"
               },
-              "price": 7.0
+              "price": 8.0
             },
             {
               "id": "naco-carne",
@@ -123,7 +123,7 @@
                 "en": "With salad and potatoes",
                 "fr": "Avec salade et pommes de terre"
               },
-              "price": 17.0
+              "price": 19.0
             },
             {
               "id": "posta",
@@ -146,7 +146,7 @@
                 "en": "Pica-pau (beef bites)",
                 "fr": "Pica-pau — bouchées de bœuf"
               },
-              "price": 9.0
+              "price": 9.5
             },
             {
               "id": "bacalhau-cebolada",
@@ -160,7 +160,7 @@
                 "en": "With fries",
                 "fr": "Avec frites"
               },
-              "price": 12.0
+              "price": 15.0
             },
             {
               "id": "prego-pao",
@@ -169,7 +169,7 @@
                 "en": "Steak sandwich",
                 "fr": "Sandwich au steak"
               },
-              "price": 4.0
+              "price": 4.5
             },
             {
               "id": "pires-batatas",
@@ -196,7 +196,7 @@
                 "en": "Sausage, egg and fries",
                 "fr": "Saucisse, œuf et frites"
               },
-              "price": 4.0
+              "price": 5.0
             }
           ],
           "figures": [
@@ -223,7 +223,7 @@
                 "en": "Chicken skewer",
                 "fr": "Brochette de poulet"
               },
-              "price": 9.0
+              "price": 13.0
             },
             {
               "id": "espetada-mar",
@@ -237,7 +237,7 @@
                 "en": "Prawns and squid",
                 "fr": "Crevettes et calamars"
               },
-              "price": 12.0
+              "price": 15.0
             },
             {
               "id": "espetada-alcatra",
@@ -246,7 +246,7 @@
                 "en": "Rump steak skewer",
                 "fr": "Brochette de rumsteck"
               },
-              "price": 10.0
+              "price": 15.0
             }
           ],
           "figures": [
@@ -382,7 +382,7 @@
                 "en": "Mixed omelette",
                 "fr": "Omelette jambon-fromage"
               },
-              "price": 6.5
+              "price": 7.0
             },
             {
               "id": "omelete-queijo",
@@ -391,7 +391,7 @@
                 "en": "Cheese omelette",
                 "fr": "Omelette au fromage"
               },
-              "price": 5.2
+              "price": 6.0
             },
             {
               "id": "omelete-fiambre",
@@ -400,7 +400,7 @@
                 "en": "Ham omelette",
                 "fr": "Omelette au jambon"
               },
-              "price": 5.2
+              "price": 6.0
             },
             {
               "id": "omelete-presunto",
@@ -409,7 +409,7 @@
                 "en": "Cured ham omelette",
                 "fr": "Omelette au jambon cru"
               },
-              "price": 6.0
+              "price": 7.0
             },
             {
               "id": "omelete-bacon",
@@ -418,7 +418,7 @@
                 "en": "Bacon omelette",
                 "fr": "Omelette au bacon"
               },
-              "price": 6.0
+              "price": 7.0
             }
           ],
           "figures": [
@@ -455,7 +455,7 @@
                 "en": "Cheese, ham, lettuce, tomato and boiled egg",
                 "fr": "Fromage, jambon, laitue, tomate et œuf dur"
               },
-              "price": 5.0
+              "price": 5.5
             },
             {
               "id": "baguete-atum",
@@ -469,7 +469,7 @@
                 "en": "Tuna, lettuce, tomato and boiled egg",
                 "fr": "Thon, laitue, tomate et œuf dur"
               },
-              "price": 5.0
+              "price": 5.5
             },
             {
               "id": "baguete-panado",
@@ -483,7 +483,7 @@
                 "en": "Breaded chicken, lettuce and tomato",
                 "fr": "Poulet pané, laitue et tomate"
               },
-              "price": 5.0
+              "price": 5.5
             },
             {
               "id": "baguete-lombo",
@@ -497,7 +497,7 @@
                 "en": "Pork loin, bacon, cheese and mushrooms",
                 "fr": "Filet de porc, bacon, fromage et champignons"
               },
-              "price": 5.0
+              "price": 5.5
             },
             {
               "id": "baguete-marisco",
@@ -511,7 +511,7 @@
                 "en": "Seafood sticks, lettuce and tomato",
                 "fr": "Surimi, laitue et tomate"
               },
-              "price": 5.0
+              "price": 5.5
             },
             {
               "id": "baguete-presunto",
@@ -525,7 +525,7 @@
                 "en": "Cured ham and cheese",
                 "fr": "Jambon cru et fromage"
               },
-              "price": 5.0
+              "price": 5.5
             }
           ],
           "figures": [
@@ -552,7 +552,7 @@
                 "en": "Beef patty, cheese, ham, lettuce and tomato",
                 "fr": "Steak haché, fromage, jambon, laitue et tomate"
               },
-              "price": 5.0
+              "price": 5.5
             },
             {
               "id": "cheese-bacon",
@@ -566,7 +566,7 @@
                 "en": "Beef patty, cheese, ham, lettuce, tomato, egg and bacon",
                 "fr": "Steak haché, fromage, jambon, laitue, tomate, œuf et bacon"
               },
-              "price": 6.0
+              "price": 6.5
             },
             {
               "id": "av-burger",
@@ -580,7 +580,7 @@
                 "en": "Beef patty, cheese, lettuce, tomato, onion, mushrooms and bacon",
                 "fr": "Steak haché, fromage, laitue, tomate, oignon, champignons et bacon"
               },
-              "price": 6.0
+              "price": 6.5
             },
             {
               "id": "hamburguer-especial",
@@ -594,7 +594,7 @@
                 "en": "Beef patty, cheese, ham, fries and francesinha sauce",
                 "fr": "Steak haché, fromage, jambon, frites et sauce francesinha"
               },
-              "price": 7.0
+              "price": 7.5
             },
             {
               "id": "hamburguer-frango",
@@ -608,7 +608,7 @@
                 "en": "Chicken patty, cheese, ham, lettuce and tomato",
                 "fr": "Steak de poulet, fromage, jambon, laitue et tomate"
               },
-              "price": 4.0
+              "price": 6.5
             },
             {
               "id": "crazy",
@@ -617,7 +617,7 @@
                 "en": "Crazy",
                 "fr": "Crazy"
               },
-              "price": 4.0
+              "price": 4.5
             }
           ],
           "figures": [
@@ -644,7 +644,7 @@
                 "en": "Steak, sausage or linguiça, cheese and ham",
                 "fr": "Steak, saucisse ou linguiça, fromage et jambon"
               },
-              "price": 8.0
+              "price": 9.0
             },
             {
               "id": "francesinha-especial",
@@ -658,7 +658,7 @@
                 "en": "Steak, sausage, linguiça, cheese, ham, egg and fries",
                 "fr": "Steak, saucisse, linguiça, fromage, jambon, œuf et frites"
               },
-              "price": 10.0
+              "price": 11.0
             },
             {
               "id": "francesinha-frango",
@@ -672,7 +672,7 @@
                 "en": "Chicken breast, cheese, ham, egg and fries",
                 "fr": "Filet de poulet, fromage, jambon, œuf et frites"
               },
-              "price": 10.0
+              "price": 11.0
             },
             {
               "id": "francesinha-avenida",
@@ -686,7 +686,7 @@
                 "en": "Steak, sausage, linguiça, criolo, cheese, ham, egg and fries",
                 "fr": "Steak, saucisse, linguiça, saucisse créole, fromage, jambon, œuf et frites"
               },
-              "price": 10.0
+              "price": 12.0
             },
             {
               "id": "cachorro-normal",
@@ -700,7 +700,7 @@
                 "en": "Baguette, sausage, cheese, ham, lettuce and tomato",
                 "fr": "Baguette, saucisse, fromage, jambon, laitue et tomate"
               },
-              "price": 5.0
+              "price": 5.5
             },
             {
               "id": "cachorro-especial",
@@ -714,7 +714,7 @@
                 "en": "Baguette, cheese, ham, fries and francesinha sauce",
                 "fr": "Baguette, fromage, jambon, frites et sauce francesinha"
               },
-              "price": 6.0
+              "price": 7.0
             },
             {
               "id": "sr-cachorro",
@@ -728,7 +728,7 @@
                 "en": "Large baguette, cheese, ham, fries, francesinha sauce and shoestring potatoes",
                 "fr": "Grande baguette, fromage, jambon, frites, sauce francesinha et pommes allumettes"
               },
-              "price": 8.0
+              "price": 9.5
             },
             {
               "id": "tosta-mista-especial",
@@ -737,7 +737,7 @@
                 "en": "Special ham & cheese toastie",
                 "fr": "Croque jambon-fromage spécial"
               },
-              "price": 4.0
+              "price": 5.0
             }
           ],
           "figures": [
@@ -772,11 +772,11 @@
               "prices": [
                 {
                   "size": "small",
-                  "value": 6.5
+                  "value": 7.5
                 },
                 {
                   "size": "medium",
-                  "value": 8.6
+                  "value": 9.5
                 }
               ]
             },
@@ -795,11 +795,11 @@
               "prices": [
                 {
                   "size": "small",
-                  "value": 7.6
+                  "value": 8.6
                 },
                 {
                   "size": "medium",
-                  "value": 8.9
+                  "value": 9.9
                 }
               ]
             },
@@ -818,11 +818,11 @@
               "prices": [
                 {
                   "size": "small",
-                  "value": 7.9
+                  "value": 8.9
                 },
                 {
                   "size": "medium",
-                  "value": 10.0
+                  "value": 11.0
                 }
               ]
             },
@@ -841,11 +841,11 @@
               "prices": [
                 {
                   "size": "small",
-                  "value": 7.5
+                  "value": 8.5
                 },
                 {
                   "size": "medium",
-                  "value": 9.9
+                  "value": 10.9
                 }
               ]
             },
@@ -864,11 +864,11 @@
               "prices": [
                 {
                   "size": "small",
-                  "value": 7.9
+                  "value": 8.9
                 },
                 {
                   "size": "medium",
-                  "value": 10.9
+                  "value": 11.9
                 }
               ]
             },
@@ -887,11 +887,11 @@
               "prices": [
                 {
                   "size": "small",
-                  "value": 7.9
+                  "value": 8.9
                 },
                 {
                   "size": "medium",
-                  "value": 10.9
+                  "value": 11.9
                 }
               ]
             },
@@ -910,11 +910,11 @@
               "prices": [
                 {
                   "size": "small",
-                  "value": 6.9
+                  "value": 7.9
                 },
                 {
                   "size": "medium",
-                  "value": 10.9
+                  "value": 11.9
                 }
               ]
             },
@@ -933,11 +933,11 @@
               "prices": [
                 {
                   "size": "small",
-                  "value": 7.95
+                  "value": 8.8
                 },
                 {
                   "size": "medium",
-                  "value": 10.9
+                  "value": 11.9
                 }
               ]
             },
@@ -956,11 +956,11 @@
               "prices": [
                 {
                   "size": "small",
-                  "value": 8.0
+                  "value": 9.5
                 },
                 {
                   "size": "medium",
-                  "value": 11.7
+                  "value": 13.0
                 }
               ]
             },
@@ -979,11 +979,11 @@
               "prices": [
                 {
                   "size": "small",
-                  "value": 8.0
+                  "value": 9.5
                 },
                 {
                   "size": "medium",
-                  "value": 12.0
+                  "value": 13.0
                 }
               ]
             },
@@ -1002,11 +1002,11 @@
               "prices": [
                 {
                   "size": "small",
-                  "value": 8.8
+                  "value": 9.6
                 },
                 {
                   "size": "medium",
-                  "value": 11.7
+                  "value": 12.7
                 }
               ]
             },
@@ -1025,7 +1025,7 @@
               "prices": [
                 {
                   "size": "small",
-                  "value": 8.4
+                  "value": 9.4
                 },
                 {
                   "size": "medium",
@@ -1048,11 +1048,11 @@
               "prices": [
                 {
                   "size": "small",
-                  "value": 8.0
+                  "value": 9.0
                 },
                 {
                   "size": "medium",
-                  "value": 11.7
+                  "value": 12.7
                 }
               ]
             },
