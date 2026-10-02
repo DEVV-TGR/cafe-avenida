@@ -14,11 +14,10 @@
     el.href = href;
   }
 
-  /** URL público da página: com ?lang= só quando o visitante escolheu um idioma (como no hreflang). */
-  function pageUrl(cfg, isMenu) {
-    const path = isMenu ? "/ementa" : "/";
-    const lang = new URLSearchParams(window.location.search).get("lang");
-    return lang ? `${cfg.domain}${path}?lang=${encodeURIComponent(lang)}` : `${cfg.domain}${path}`;
+  /** URL público da página no idioma atual: /, /en, /fr (e /ementa, /en/ementa, /fr/ementa), como no hreflang. */
+  function pageUrl(cfg, isMenu, i18n) {
+    const path = i18n.pathFor(isMenu ? "/ementa" : "/");
+    return `${cfg.domain}${path === "/" ? "/" : path}`;
   }
 
   function setMeta(name, content, attr) {
@@ -95,7 +94,7 @@
     setMeta("og:title", title, "property");
     setMeta("og:description", desc, "property");
     setMeta("og:type", "website", "property");
-    const url = pageUrl(cfg, isMenu);
+    const url = pageUrl(cfg, isMenu, i18n);
     setMeta("og:url", url, "property");
     setLink("canonical", url);
     setMeta("og:locale", LOCALES[i18n.getLang()], "property");

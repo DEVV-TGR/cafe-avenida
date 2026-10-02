@@ -133,3 +133,37 @@ test("idioma guardado no localStorage também é validado", () => {
   });
   assert.equal(contexto.CafeI18n.getLang(), "pt");
 });
+
+test("idioma pelo endereço: /en e /fr; o resto fica em português", () => {
+  const casos = [
+    ["/", "pt"],
+    ["/ementa", "pt"],
+    ["/en", "en"],
+    ["/en/ementa", "en"],
+    ["/fr/ementa", "fr"],
+    ["/de/ementa", "pt"],
+    ["/%3Cscript%3E/ementa", "pt"],
+    ["/__proto__", "pt"],
+  ];
+  for (const [caminho, esperado] of casos) {
+    const contexto = executar(["js/i18n.js"], {
+      location: { pathname: caminho, search: "", hash: "", href: `https://exemplo.invalid${caminho}` },
+      localStorage: { getItem: () => null, setItem() {} },
+      URLSearchParams,
+    });
+    assert.equal(contexto.CafeI18n.getLang(), esperado, caminho);
+  }
+});
+
+test("endereços por idioma: pathFor monta /, /ementa, /en, /en/ementa…", () => {
+  const caminhos = { "/en/ementa": ["/en", "/en/ementa"], "/ementa": ["/", "/ementa"], "/fr": ["/fr", "/fr/ementa"] };
+  for (const [caminho, [inicio, ementa]] of Object.entries(caminhos)) {
+    const contexto = executar(["js/i18n.js"], {
+      location: { pathname: caminho, search: "", hash: "", href: `https://exemplo.invalid${caminho}` },
+      localStorage: { getItem: () => null, setItem() {} },
+      URLSearchParams,
+    });
+    assert.equal(contexto.CafeI18n.pathFor("/"), inicio, `${caminho}: início`);
+    assert.equal(contexto.CafeI18n.pathFor("/ementa"), ementa, `${caminho}: ementa`);
+  }
+});

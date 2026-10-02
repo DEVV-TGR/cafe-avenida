@@ -32,7 +32,7 @@
       const description = document.createElement('p'); description.textContent = local(item.description);
       copy.append(label, title, description);
       if (item.menuId) {
-        const link = document.createElement('a'); link.textContent = i18n.t('chooser.menu'); link.href = `ementa?lang=${i18n.getLang()}#item-${item.menuId}`;
+        const link = document.createElement('a'); link.textContent = i18n.t('chooser.menu'); link.href = `${i18n.pathFor("/ementa")}#item-${item.menuId}`;
         copy.append(link);
       }
       if (pool.length > 1) {

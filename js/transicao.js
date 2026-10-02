@@ -159,10 +159,10 @@
     }
   };
 
-  /** "/", "/index.html" → "index.html"; "/ementa" (URL sem extensão) ou "/ementa.html" → "ementa.html". */
+  /** "/", "/en", "/fr", "/index.html" → "index.html"; "/ementa", "/en/ementa", "/ementa.html" → "ementa.html". */
   function pageName(pathname) {
     const last = pathname.replace(/\/$/, "").split("/").pop();
-    if (!last || last === "index" || last === "index.html") return "index.html";
+    if (!last || ["index", "index.html", "en", "fr"].includes(last)) return "index.html";
     return last.includes(".") ? last : `${last}.html`;
   }
 

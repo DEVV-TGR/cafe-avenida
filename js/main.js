@@ -187,7 +187,7 @@
         const link = document.createElement("a");
         link.className = "suggestion-card__menu";
         link.textContent = i18n.t("chooser.menu");
-        link.href = `ementa?lang=${i18n.getLang()}#item-${item.menuId}`;
+        link.href = `${i18n.pathFor("/ementa")}#item-${item.menuId}`;
         card.appendChild(link);
       }
       grid.appendChild(card);

@@ -51,8 +51,9 @@ async function main() {
 
   const targets = [
     ["ementa", `${domain}/ementa`],
-    ["ementa-pt", `${domain}/ementa?lang=pt`],
-    ["ementa-en", `${domain}/ementa?lang=en`],
+    ["ementa-pt", `${domain}/ementa`],
+    ["ementa-en", `${domain}/en/ementa`],
+    ["ementa-fr", `${domain}/fr/ementa`],
   ];
 
   for (const [name, url] of targets) {

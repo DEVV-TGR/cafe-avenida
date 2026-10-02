@@ -7,16 +7,17 @@
     if (!cfg) return;
 
     const isHome = document.body.dataset.page === "home";
+    const home = window.CafeI18n?.pathFor("/") ?? "./";
 
     document.querySelectorAll(".pg-indice__seccao").forEach((link) => {
       const hash = link.getAttribute("data-section-hash");
       if (!hash) return;
-      link.href = isHome ? hash : `./${hash}`;
+      link.href = isHome ? hash : `${home}${hash}`;
     });
 
     const marca = document.querySelector(".pg-barra__marca");
     if (marca) {
-      marca.href = isHome ? "#main" : "./";
+      marca.href = isHome ? "#main" : home;
     }
 
     document.querySelectorAll("[data-phone-display]").forEach((el) => {

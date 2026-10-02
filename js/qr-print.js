@@ -3,7 +3,7 @@
  */
 (function () {
   function qrSrc(lang) {
-    return lang === "fr" ? "qr/ementa.png" : `qr/ementa-${lang}.png`;
+    return `qr/ementa-${lang}.png`;
   }
 
   function init() {

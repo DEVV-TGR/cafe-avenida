@@ -101,12 +101,20 @@ As imagens ficam 30 dias em cache no browser: ao trocar uma foto, usar um **nome
 
 ---
 
-## Idioma (PT / EN)
+## Idiomas (PT / EN / FR)
 
-- Português, inglês e francês. Seletor no header (bandeira + código), com o idioma atual marcado.
-- Primeira visita: idioma do browser; fallback **PT**.
-- Preferência guardada em `localStorage`.
-- Forçar via URL: `?lang=pt`, `?lang=en` ou `?lang=fr` (ex.: `avenidacafe.pt/ementa?lang=en`).
+| | Início | Ementa |
+| --- | --- | --- |
+| Português | `avenidacafe.pt/` | `avenidacafe.pt/ementa` |
+| Inglês | `avenidacafe.pt/en` | `avenidacafe.pt/en/ementa` |
+| Francês | `avenidacafe.pt/fr` | `avenidacafe.pt/fr/ementa` |
+
+- O endereço decide o idioma. As versões `/en` e `/fr` são as mesmas páginas (rewrites no `vercel.json`); o `js/i18n.js` lê o prefixo.
+- Seletor no header (bandeira + código), com o idioma atual marcado; ao trocar, o endereço muda sem recarregar.
+- A escolha fica guardada no `localStorage`: quem escolheu inglês e volta a `avenidacafe.pt/` vê logo a versão inglesa.
+- Não se adivinha pelo idioma do browser: o robô do Google é "inglês" e indexaria a página portuguesa em inglês.
+- Links antigos com `?lang=en` / `?lang=fr` redirecionam para `/en` / `/fr`; `/pt` redireciona para `/`.
+- Em desenvolvimento (`npm run dev`) os prefixos não existem: usar `?lang=en`.
 
 ---
 
@@ -137,7 +145,7 @@ npm run generate-qr
 node generate-qr.mjs --domain https://oseudominio.pt
 ```
 
-Ficheiros em `qr/` (`ementa`, `ementa-pt`, `ementa-en` em SVG/PNG). Para imprimir mesas: abrir `qr-print.html` no browser.
+Ficheiros em `qr/` em SVG/PNG: `ementa` e `ementa-pt` (→ `/ementa`), `ementa-en` (→ `/en/ementa`), `ementa-fr` (→ `/fr/ementa`). Para imprimir mesas: abrir `qr-print.html` no browser.
 
 ---
 
