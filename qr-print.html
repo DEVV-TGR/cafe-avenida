@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSP igual em todas as páginas. Ao mudar um script ou style inline, atualizar o hash (npm test indica o valor). -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-UuVM8p71BA9Kre17rHIaD76AwMLpbaKZAKGHR6FE+7Q='; style-src 'self' https://fonts.googleapis.com 'sha256-Ajhk23fZ/O+42Xb4A6mV7RCoS/L4wUE6a3+m+ADX2sQ=' 'sha256-8/xuEuKmb/1Mau2P1hluRIImozaxZXvftmdO2NNPHHs=' 'sha256-ye3fPO5XKg75LzBJV/no4GfmoebCxgmd7D+JdbBt1ww='; font-src https://fonts.gstatic.com; img-src 'self'; media-src 'self'; connect-src 'self'; frame-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>QR — Ementa</title>
+    <link rel="stylesheet" href="css/qr-print.css" />
+  </head>
+  <body>
+    <p class="no-print">
+      <button type="button" data-print>Imprimir cartão</button>
+    </p>
+
+    <article class="print-sheet" id="qr-card">
+      <img class="print-logo" data-logo src="images/logo.png" alt="Café Avenida" width="527" height="535" />
+      <h1 class="visually-hidden" data-config="name">Café Avenida</h1>
+      <p class="bilingual"><span data-i18n="qrPrint.menuLabel">Ementa</span> / Menu</p>
+      <img id="qr-image" src="qr/ementa-pt.png" alt="QR code ementa" width="512" height="512" />
+      <p data-i18n="qrPrint.scanHint">Aponte a câmara para o código</p>
+    </article>
+
+    <script src="config.js"></script>
+    <script src="js/branding.js"></script>
+    <script src="i18n/pt.js"></script>
+    <script src="i18n/en.js"></script>
+    <script src="i18n/fr.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/qr-print.js"></script>
+  </body>
+</html>

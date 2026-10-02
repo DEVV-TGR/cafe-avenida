@@ -1,0 +1,86 @@
+@page {
+  size: A6 landscape;
+  margin: 12mm;
+}
+
+:root {
+  --color-primary: #8b5a3c;
+  --color-secondary: #4b2c20;
+  --color-text: #3d2914;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--color-text);
+  background: #eee;
+}
+
+.print-sheet {
+  max-width: 148mm;
+  margin: 1rem auto;
+  padding: 12mm;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.print-logo {
+  width: 38mm;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto 0.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.print-sheet .bilingual {
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.print-sheet img {
+  width: 42mm;
+  height: 42mm;
+  margin: 0 auto 0.75rem;
+}
+
+.print-sheet p {
+  margin: 0;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .print-sheet {
+    box-shadow: none;
+    margin: 0;
+    max-width: none;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
+
+.no-print {
+  text-align: center;
+  padding: 1rem;
+}

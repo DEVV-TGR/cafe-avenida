@@ -1,0 +1,13 @@
+{
+  "name": "cafe-avenida",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "test": "node --test \"tests/*.test.mjs\""
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5",
+    "vite": "^6.3.5"
+  }
+}

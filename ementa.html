@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="ca-loading">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSP igual em todas as páginas. Ao mudar um script ou style inline, atualizar o hash (npm test indica o valor). -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-UuVM8p71BA9Kre17rHIaD76AwMLpbaKZAKGHR6FE+7Q='; style-src 'self' https://fonts.googleapis.com 'sha256-Ajhk23fZ/O+42Xb4A6mV7RCoS/L4wUE6a3+m+ADX2sQ=' 'sha256-8/xuEuKmb/1Mau2P1hluRIImozaxZXvftmdO2NNPHHs=' 'sha256-ye3fPO5XKg75LzBJV/no4GfmoebCxgmd7D+JdbBt1ww='; font-src https://fonts.gstatic.com; img-src 'self'; media-src 'self'; connect-src 'self'; frame-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <style id="ca-critical">
+      html.ca-loading {
+        background: #dad2c6;
+        overflow: hidden;
+      }
+      html.ca-loading body > :not(#ca-transicao) {
+        visibility: hidden !important;
+      }
+      #ca-transicao {
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        background: #dad2c6;
+      }
+      #ca-transicao .ca-tr__cena--portas {
+        display: none;
+      }
+    </style>
+    <link rel="stylesheet" href="css/transicao.css" />
+    <script src="js/movimento-reduzido.js"></script>
+    <meta name="theme-color" content="#DAD2C6" />
+    <title>Ementa — Café Avenida</title>
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <meta name="description" content="Ementa digital" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Lora:ital,wght@0,500;1,500&family=Manrope:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/barra.css" />
+    <link rel="stylesheet" href="css/ementa.css" />
+  </head>
+  <body data-page="ementa">
+    <div id="ca-transicao" class="ca-tr ca-tr--panfleto ca-tr--abre" aria-hidden="true">
+      <div class="ca-tr__cena ca-tr__cena--portas">
+        <div class="ca-tr__caixilho ca-tr__caixilho--sup" aria-hidden="true"></div>
+        <div class="ca-tr__caixilho ca-tr__caixilho--lat ca-tr__caixilho--lat-esq" aria-hidden="true"></div>
+        <div class="ca-tr__caixilho ca-tr__caixilho--lat ca-tr__caixilho--lat-dir" aria-hidden="true"></div>
+        <div class="ca-tr__soleira" aria-hidden="true"></div>
+        <div class="ca-tr__logo-vao">
+          <div class="ca-tr__logo-slot">
+            <img class="ca-tr__logo" src="" alt="" width="160" height="160" data-src="images/logo.png" />
+          </div>
+        </div>
+        <div class="ca-tr__vidro ca-tr__vidro--esq" aria-hidden="true">
+          <span class="ca-tr__puxador"></span>
+        </div>
+        <div class="ca-tr__vidro ca-tr__vidro--dir" aria-hidden="true">
+          <span class="ca-tr__puxador"></span>
+        </div>
+      </div>
+      <div class="ca-tr__cena ca-tr__cena--panfleto">
+        <div class="ca-panfleto" aria-hidden="true">
+          <div class="ca-panfleto__folha ca-panfleto__folha--esq">
+            <p class="ca-panfleto__titulo">Cafés</p>
+            <div class="ca-panfleto__linhas">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="ca-panfleto__folha ca-panfleto__folha--meio">
+            <p class="ca-panfleto__marca">Café Avenida</p>
+            <img class="ca-panfleto__selo" src="images/logo.png" alt="" width="64" height="64" />
+            <p class="ca-panfleto__titulo">Ementa</p>
+            <div class="ca-panfleto__linhas">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="ca-panfleto__folha ca-panfleto__folha--dir">
+            <p class="ca-panfleto__titulo">Petiscos</p>
+            <div class="ca-panfleto__linhas">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/transicao.js"></script>
+
+    <a class="skip-link" href="#menu-sections" data-i18n="nav.skipToContent">Saltar para o conteúdo</a>
+
+    <header class="pg-barra">
+      <a class="pg-barra__marca" href="index.html">
+        <img data-logo src="images/logo.png" alt="Café Avenida" width="527" height="535" />
+      </a>
+
+      <nav class="pg-indice" data-i18n-attr="aria-label:nav.main" aria-label="Navegação principal">
+        <a class="pg-indice__seccao" href="index.html#sobre" data-section-hash="#sobre" data-i18n="nav.sections.about">O café</a>
+        <a class="pg-indice__seccao" href="index.html#galeria" data-section-hash="#galeria" data-i18n="nav.sections.gallery">Galeria</a>
+        <a class="pg-indice__seccao" href="index.html#sugestoes" data-section-hash="#sugestoes" data-i18n="nav.sections.suggestions">Sugestões</a>
+        <a class="pg-indice__seccao" href="index.html#opinioes" data-section-hash="#opinioes" data-i18n="nav.sections.reviews">Opiniões</a>
+        <a class="pg-indice__seccao" href="index.html#localizacao" data-section-hash="#localizacao" data-i18n="nav.sections.location"
+          >Onde estamos</a
+        >
+        <span aria-current="page" data-i18n="nav.menu">Ementa</span>
+      </nav>
+
+      <div class="pg-barra__idioma">
+        <div class="lang-switch" role="group" aria-label="Idioma" data-i18n-attr="aria-label:nav.language">
+          <button type="button" class="is-active" data-lang-btn="pt" aria-pressed="true" lang="pt-PT" aria-label="Português">
+            <img src="images/bandeiras/pt.svg" alt="" width="24" height="16" /><span aria-hidden="true">PT</span>
+          </button>
+          <button type="button" data-lang-btn="en" aria-pressed="false" lang="en" aria-label="English">
+            <img src="images/bandeiras/en.svg" alt="" width="24" height="16" /><span aria-hidden="true">EN</span>
+          </button>
+          <button type="button" data-lang-btn="fr" aria-pressed="false" lang="fr" aria-label="Français">
+            <img src="images/bandeiras/fr.svg" alt="" width="24" height="16" /><span aria-hidden="true">FR</span>
+          </button>
+        </div>
+      </div>
+
+      <a class="pg-acao" data-tel-link href="tel:+351255619414">
+        <svg class="pg-acao__icone" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"
+          />
+        </svg>
+        <span class="pg-barra__curto" data-i18n="nav.callShort">Ligar</span>
+        <span class="pg-barra__longo"
+          ><span data-i18n="nav.callLong">Ligar</span> · <span data-config="phone">255 619 414</span></span
+        >
+      </a>
+    </header>
+
+    <header class="menu-header">
+      <h1 class="visually-hidden" data-config="name">Café Avenida</h1>
+      <nav class="menu-nav" data-menu-nav aria-label="Categorias da ementa" data-i18n-attr="aria-label:menuPage.categories"></nav>
+    </header>
+
+    <main class="menu-page">
+      <div class="menu-intro">
+        <p class="section__eyebrow menu-intro__eyebrow" data-config="name">Café Avenida</p>
+        <h2 class="menu-intro__title" data-i18n="menuPage.title">Ementa</h2>
+        <p class="menu-intro__notice" data-i18n="menuPage.comingSoon">Do primeiro café à sobremesa, escolhe o que te apetece.</p>
+      </div>
+      <div class="menu-sections" id="menu-sections" data-menu-sections></div>
+      <footer class="menu-signature">
+        <img src="images/logo-linha.png" alt="Café Avenida" width="2200" height="637" loading="lazy" decoding="async" />
+      </footer>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="js/branding.js"></script>
+    <script src="i18n/pt.js"></script>
+    <script src="i18n/en.js"></script>
+    <script src="i18n/fr.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/barra.js"></script>
+    <script src="js/seo.js"></script>
+    <script src="js/ementa.js"></script>
+  </body>
+</html>

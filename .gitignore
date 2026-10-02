@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+scripts/node_modules/
+dist/
+
+# Segredos e configuração local (o site é publicado tal como está no repositório)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.netlify/

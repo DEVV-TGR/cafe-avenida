@@ -1,0 +1,507 @@
+/* Onde estamos — cabeçalho com contactos, mapa emoldurado e faixa de horário */
+
+.pg-onde {
+  scroll-margin-top: var(--barra-height, 4.35rem);
+}
+
+.pg-onde__inner {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+/* Cabeçalho */
+.pg-onde__topo {
+  display: grid;
+  gap: 1.5rem;
+  align-items: end;
+}
+
+.pg-onde__titulo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+.pg-onde__nome {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 4.6vw, 3rem);
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  line-height: 1.05;
+  margin: 0;
+  color: var(--color-secondary);
+}
+
+.pg-onde__morada {
+  margin: 0.55rem 0 0;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: color-mix(in srgb, var(--color-text) 80%, transparent);
+}
+
+.pg-onde__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  transition: background-color 280ms ease, color 280ms ease, box-shadow 280ms ease, opacity 280ms ease;
+}
+
+.pg-onde__status::before {
+  content: "";
+  flex-shrink: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 0 0 transparent;
+}
+
+.pg-onde__status.is-open {
+  background: color-mix(in srgb, #5e8a4f 18%, var(--color-surface));
+  color: #3a6b2e;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, #5e8a4f 28%, transparent),
+    0 0 14px color-mix(in srgb, #6fa85a 22%, transparent);
+  animation: pg-onde-status-breathe 2.6s ease-in-out infinite;
+}
+
+.pg-onde__status.is-open::before {
+  background: #4f9a3f;
+  box-shadow: 0 0 0 0 color-mix(in srgb, #5e8a4f 55%, transparent);
+  animation: pg-onde-status-dot 2.6s ease-in-out infinite;
+}
+
+.pg-onde__status.is-closed {
+  background: color-mix(in srgb, var(--color-espresso) 10%, var(--color-surface));
+  color: color-mix(in srgb, var(--color-text) 48%, transparent);
+  opacity: 0.78;
+  box-shadow: none;
+  animation: none;
+}
+
+.pg-onde__status.is-closed::before {
+  background: color-mix(in srgb, var(--color-text) 38%, transparent);
+  box-shadow: none;
+  animation: none;
+}
+
+@keyframes pg-onde-status-breathe {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, #5e8a4f 22%, transparent),
+      0 0 8px color-mix(in srgb, #6fa85a 12%, transparent);
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, #5e8a4f 42%, transparent),
+      0 0 18px color-mix(in srgb, #6fa85a 34%, transparent);
+  }
+}
+
+@keyframes pg-onde-status-dot {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 color-mix(in srgb, #5e8a4f 50%, transparent);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.12);
+    box-shadow: 0 0 0 0.35rem color-mix(in srgb, #5e8a4f 0%, transparent);
+    opacity: 1;
+  }
+}
+
+.pg-onde__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1.25rem 2rem;
+}
+
+.pg-onde__contactos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin: 0;
+}
+
+.pg-onde__contactos dt {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold-text);
+}
+
+.pg-onde__contactos dd {
+  margin: 0.15rem 0 0;
+  font-size: 1.05rem;
+}
+
+.pg-onde__contactos a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.pg-onde__contactos a:hover,
+.pg-onde__contactos a:focus-visible {
+  color: var(--color-primary);
+}
+
+.pg-onde__botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* Mapa emoldurado */
+.pg-onde__mapa {
+  --pin-x: 0.58;
+  --pin-y: 0.52;
+  --pin-w: clamp(2.85rem, 4.6vw, 3.85rem);
+  position: relative;
+  container-type: size;
+  margin: 0;
+  height: clamp(15rem, 42vw, 30rem);
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #cfc5b8;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 35%, transparent);
+  box-shadow: var(--shadow);
+}
+
+.pg-onde__mapa::after {
+  content: "";
+  position: absolute;
+  inset: 0.6rem;
+  border: 1px solid color-mix(in srgb, #fff 55%, transparent);
+  border-radius: calc(var(--radius) - 5px);
+  pointer-events: none;
+}
+
+/* O café (--pin-x/--pin-y do SVG, 1600×820) fica ao centro da moldura, com o alfinete inteiro centrado. */
+.pg-onde__mapa-img,
+.pg-onde__alfinete {
+  --foco-y: calc(50cqh + (var(--pin-w) + 0.95rem) / 2);
+}
+
+.pg-onde__mapa-img {
+  --map-w: max(
+    calc(50cqw / min(var(--pin-x), 1 - var(--pin-x))),
+    calc((50cqh + var(--pin-w)) * 1.951 / min(var(--pin-y), 1 - var(--pin-y)))
+  );
+  position: absolute;
+  left: calc(50cqw - var(--pin-x) * var(--map-w));
+  top: calc(var(--foco-y) - var(--pin-y) * var(--map-w) / 1.951);
+  width: var(--map-w);
+  max-width: none;
+  height: auto;
+  aspect-ratio: 1600 / 820;
+  display: block;
+}
+
+/* Alfinete (cabeça + ponta) — a ponta marca o sítio no mapa; clique abre o Google Maps */
+.pg-onde__alfinete {
+  position: absolute;
+  left: 50%;
+  top: var(--foco-y);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--pin-w);
+  translate: -50% calc(-100% - 0.1rem);
+  z-index: 2;
+  pointer-events: auto;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  filter: drop-shadow(0 6px 14px rgba(26, 18, 12, 0.32));
+  transition: filter 220ms ease, translate 220ms ease;
+}
+
+.pg-onde__alfinete:hover,
+.pg-onde__alfinete:focus-visible {
+  filter: drop-shadow(0 8px 18px rgba(26, 18, 12, 0.42));
+  translate: -50% calc(-100% - 0.35rem);
+  outline: none;
+}
+
+.pg-onde__alfinete:focus-visible .pg-onde__alfinete-cabeca {
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, var(--color-surface) 90%, transparent),
+    0 0 0 5px var(--color-primary);
+}
+
+.pg-onde__alfinete-cabeca {
+  width: 100%;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 2.5px solid var(--color-primary);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-primary) 45%, transparent);
+  animation: pg-halo 3.2s ease-out infinite;
+}
+
+.pg-onde__alfinete-ponta {
+  width: 0;
+  height: 0;
+  margin-top: -1px;
+  border-left: 0.62rem solid transparent;
+  border-right: 0.62rem solid transparent;
+  border-top: 0.95rem solid var(--color-primary);
+}
+
+.pg-onde__alfinete-cabeca img {
+  width: 74%;
+  height: auto;
+  object-fit: contain;
+}
+
+@keyframes pg-halo {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-primary) 48%, transparent);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 1.2rem transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pg-onde__alfinete-cabeca {
+    animation: none;
+  }
+
+  .pg-onde__status.is-open,
+  .pg-onde__status.is-open::before {
+    animation: none;
+  }
+
+  .pg-onde__status.is-open {
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, #5e8a4f 32%, transparent),
+      0 0 12px color-mix(in srgb, #6fa85a 20%, transparent);
+  }
+}
+
+.pg-onde__credito {
+  position: absolute;
+  right: 1.1rem;
+  bottom: 1rem;
+  z-index: 2;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-surface) 85%, transparent);
+  font-size: 0.75rem;
+  color: color-mix(in srgb, var(--color-text) 65%, transparent);
+}
+
+.pg-onde__credito a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pg-onde__credito a:hover,
+.pg-onde__credito a:focus-visible {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* Faixa de horário */
+.pg-onde__olho {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-gold-text);
+}
+
+.pg-onde__horario {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.pg-onde__horario li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 0.9rem 1.05rem;
+  background: var(--color-surface);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+  border-radius: var(--radius);
+  font-variant-numeric: tabular-nums;
+  overflow: hidden;
+}
+
+.pg-onde__horario li span:first-child {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
+}
+
+.pg-onde__horario li span:last-child {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--color-secondary);
+}
+
+.pg-onde__horario li.is-today {
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 26px -12px color-mix(in srgb, var(--color-primary) 70%, transparent);
+}
+
+.pg-onde__horario li.is-today::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, #e4c078, var(--color-primary), #a67c3a);
+}
+
+.pg-onde__horario li.is-today span:first-child {
+  color: var(--color-gold-text);
+}
+
+.pg-onde__nota {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: var(--color-espresso);
+}
+
+/* Botões */
+.pg-botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 55%, transparent);
+  border-radius: 999px;
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease;
+}
+
+.pg-botao:hover,
+.pg-botao:focus-visible {
+  background: var(--color-primary);
+  color: #1a1410;
+  border-color: var(--color-primary);
+}
+
+.pg-botao--cheio {
+  background: linear-gradient(165deg, #e4c078 0%, var(--color-primary) 55%, #a67c3a 100%);
+  color: #1a1410;
+  border-color: var(--color-primary);
+}
+
+.pg-botao--cheio:hover,
+.pg-botao--cheio:focus-visible {
+  background: color-mix(in srgb, var(--color-primary) 75%, #fff);
+  border-color: color-mix(in srgb, var(--color-primary) 75%, #fff);
+  color: #1a1410;
+}
+
+@media (min-width: 64rem) {
+  .pg-onde__topo {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+/* Tablet: 4 + 3 dias */
+@media (max-width: 63.99rem) {
+  .pg-onde__horario {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Telemóvel: horário em lista dentro de um cartão */
+@media (max-width: 39.99rem) {
+  .pg-onde__acoes,
+  .pg-onde__botoes,
+  .pg-onde__botoes > * {
+    width: 100%;
+  }
+
+  .pg-onde__horario {
+    display: block;
+    padding: 0.35rem 1.1rem;
+    background: var(--color-surface);
+    border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+    border-radius: var(--radius);
+  }
+
+  .pg-onde__horario li {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.7rem 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  .pg-onde__horario li + li {
+    border-top: 1px solid color-mix(in srgb, var(--color-primary) 18%, transparent);
+  }
+
+  .pg-onde__horario li span:last-child {
+    font-size: 1.15rem;
+  }
+
+  .pg-onde__horario li.is-today {
+    border-color: color-mix(in srgb, var(--color-primary) 18%, transparent);
+    box-shadow: none;
+  }
+
+  .pg-onde__horario li.is-today::before {
+    inset: 0.55rem auto 0.55rem -1.1rem;
+    width: 3px;
+    height: auto;
+  }
+}
+
+/* Redes sociais integradas nos contactos. */
+.pg-onde__redes-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem 1rem;
+}
+.pg-onde__redes-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  min-height: 1.75rem;
+  font-size: .85rem;
+}
+.pg-onde__redes-links svg { flex-shrink: 0; }

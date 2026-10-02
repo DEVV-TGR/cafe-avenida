@@ -1,0 +1,2264 @@
+{
+  "categories": [
+    {
+      "id": "entradas",
+      "name": {
+        "pt": "Entradas",
+        "en": "Starters",
+        "fr": "Entrées"
+      },
+      "items": [
+        {
+          "id": "donut-queijo",
+          "name": {
+            "pt": "Donut de queijo",
+            "en": "Cheese doughnut",
+            "fr": "Beignet au fromage"
+          },
+          "price": 6.0
+        },
+        {
+          "id": "bolas-alheira",
+          "name": {
+            "pt": "Bolas de alheira",
+            "en": "Alheira sausage balls",
+            "fr": "Boulettes d’alheira"
+          },
+          "price": 5.0
+        },
+        {
+          "id": "tiras-frango",
+          "name": {
+            "pt": "Tiras de frango",
+            "en": "Chicken strips",
+            "fr": "Émincés de poulet"
+          },
+          "price": 6.0
+        },
+        {
+          "id": "ovos-rotos",
+          "name": {
+            "pt": "Ovos rotos",
+            "en": "Broken eggs with fries",
+            "fr": "Œufs cassés sur frites"
+          },
+          "price": 7.0
+        }
+      ],
+      "figures": [
+        "images/ementa/entradas-foto.jpg"
+      ]
+    },
+    {
+      "id": "principais",
+      "name": {
+        "pt": "Pratos principais",
+        "en": "Main courses",
+        "fr": "Plats principaux"
+      },
+      "subcategories": [
+        {
+          "id": "pratos",
+          "name": {
+            "pt": "Pratos",
+            "en": "Mains",
+            "fr": "Plats"
+          },
+          "items": [
+            {
+              "id": "asas-frango",
+              "name": {
+                "pt": "Asas de frango",
+                "en": "Chicken wings",
+                "fr": "Ailes de poulet"
+              },
+              "description": {
+                "pt": "Com salada e batata frita, molho agridoce",
+                "en": "With salad and fries, sweet and sour sauce",
+                "fr": "Avec salade, frites et sauce aigre-douce"
+              },
+              "price": 7.5
+            },
+            {
+              "id": "prego-prato",
+              "name": {
+                "pt": "Prego no prato",
+                "en": "Steak on a plate",
+                "fr": "Steak de bœuf à l’assiette"
+              },
+              "price": 9.0
+            },
+            {
+              "id": "fevera-prato",
+              "name": {
+                "pt": "Fêvera no prato",
+                "en": "Pork steak on a plate",
+                "fr": "Steak de porc à l’assiette"
+              },
+              "price": 8.0
+            },
+            {
+              "id": "sr-panado",
+              "name": {
+                "pt": "Sr. Panado",
+                "en": "Sr. Panado",
+                "fr": "Sr. Panado"
+              },
+              "description": {
+                "pt": "Com batata rústica",
+                "en": "Breaded chicken with rustic potatoes",
+                "fr": "Avec pommes de terre rustiques"
+              },
+              "price": 7.0
+            },
+            {
+              "id": "naco-carne",
+              "name": {
+                "pt": "Naco de carne",
+                "en": "Beef steak",
+                "fr": "Pavé de bœuf"
+              },
+              "description": {
+                "pt": "Com salada e batata",
+                "en": "With salad and potatoes",
+                "fr": "Avec salade et pommes de terre"
+              },
+              "price": 17.0
+            },
+            {
+              "id": "posta",
+              "name": {
+                "pt": "Posta",
+                "en": "Posta (beef steak)",
+                "fr": "Posta — pièce de bœuf"
+              },
+              "description": {
+                "pt": "Arroz, salada e batata",
+                "en": "Rice, salad and potatoes",
+                "fr": "Riz, salade et pommes de terre"
+              },
+              "price": 17.0
+            },
+            {
+              "id": "pica-pau",
+              "name": {
+                "pt": "Pica-pau",
+                "en": "Pica-pau (beef bites)",
+                "fr": "Pica-pau — bouchées de bœuf"
+              },
+              "price": 9.0
+            },
+            {
+              "id": "bacalhau-cebolada",
+              "name": {
+                "pt": "Bacalhau com cebolada",
+                "en": "Cod with onion sauce",
+                "fr": "Morue aux oignons"
+              },
+              "description": {
+                "pt": "Com batata frita",
+                "en": "With fries",
+                "fr": "Avec frites"
+              },
+              "price": 12.0
+            },
+            {
+              "id": "prego-pao",
+              "name": {
+                "pt": "Prego no pão",
+                "en": "Steak sandwich",
+                "fr": "Sandwich au steak"
+              },
+              "price": 4.0
+            },
+            {
+              "id": "pires-batatas",
+              "name": {
+                "pt": "Pires de batatas",
+                "en": "Side of fries",
+                "fr": "Portion de frites"
+              },
+              "price": 2.4
+            },
+            {
+              "id": "pires-batatas-queijo",
+              "name": {
+                "pt": "Pires de batatas com queijo",
+                "en": "Cheesy fries",
+                "fr": "Frites au fromage"
+              },
+              "price": 3.4
+            },
+            {
+              "id": "salsicha-ovo-batata",
+              "name": {
+                "pt": "Salsicha, ovo e batata",
+                "en": "Sausage, egg and fries",
+                "fr": "Saucisse, œuf et frites"
+              },
+              "price": 4.0
+            }
+          ],
+          "figures": [
+            "images/ementa/pratos.jpg"
+          ]
+        },
+        {
+          "id": "espetadas",
+          "name": {
+            "pt": "Espetadas",
+            "en": "Skewers",
+            "fr": "Brochettes"
+          },
+          "note": {
+            "pt": "Salada e batata em todos os pratos.",
+            "en": "All dishes served with salad and fries.",
+            "fr": "Tous les plats sont servis avec salade et frites."
+          },
+          "items": [
+            {
+              "id": "espetada-frango",
+              "name": {
+                "pt": "Espetada de frango",
+                "en": "Chicken skewer",
+                "fr": "Brochette de poulet"
+              },
+              "price": 9.0
+            },
+            {
+              "id": "espetada-mar",
+              "name": {
+                "pt": "Espetada do mar",
+                "en": "Seafood skewer",
+                "fr": "Brochette de la mer"
+              },
+              "description": {
+                "pt": "Camarão e lulas",
+                "en": "Prawns and squid",
+                "fr": "Crevettes et calamars"
+              },
+              "price": 12.0
+            },
+            {
+              "id": "espetada-alcatra",
+              "name": {
+                "pt": "Espetada de alcatra",
+                "en": "Rump steak skewer",
+                "fr": "Brochette de rumsteck"
+              },
+              "price": 10.0
+            }
+          ],
+          "figures": [
+            "images/ementa/../espetada-alcatra.jpg"
+          ]
+        },
+        {
+          "id": "massas",
+          "name": {
+            "pt": "Massas",
+            "en": "Pasta",
+            "fr": "Pâtes"
+          },
+          "items": [
+            {
+              "id": "massa-frango",
+              "name": {
+                "pt": "Massa de frango",
+                "en": "Chicken pasta",
+                "fr": "Pâtes au poulet"
+              },
+              "price": 7.5
+            },
+            {
+              "id": "massa-camarao",
+              "name": {
+                "pt": "Massa de camarão",
+                "en": "Prawn pasta",
+                "fr": "Pâtes aux crevettes"
+              },
+              "price": 7.5
+            },
+            {
+              "id": "esparguete-bolonhesa",
+              "name": {
+                "pt": "Esparguete à bolonhesa",
+                "en": "Spaghetti bolognese",
+                "fr": "Spaghetti à la bolognaise"
+              },
+              "price": 7.5
+            }
+          ],
+          "figures": [
+            "images/ementa/massa.jpg"
+          ]
+        },
+        {
+          "id": "saladas",
+          "name": {
+            "pt": "Saladas",
+            "en": "Salads",
+            "fr": "Salades"
+          },
+          "items": [
+            {
+              "id": "salada-frango",
+              "name": {
+                "pt": "Salada de frango",
+                "en": "Chicken salad",
+                "fr": "Salade de poulet"
+              },
+              "description": {
+                "pt": "Frango grelhado, alface roxa, tomate cherry, alface, queijo parmesão e crutons — molho César",
+                "en": "Grilled chicken, red lettuce, cherry tomatoes, lettuce, parmesan and croutons — Caesar dressing",
+                "fr": "Poulet grillé, laitue rouge, tomates cerises, laitue, parmesan et croûtons — sauce César"
+              },
+              "price": 7.5
+            },
+            {
+              "id": "salada-tropical",
+              "name": {
+                "pt": "Salada tropical / verão",
+                "en": "Tropical / summer salad",
+                "fr": "Salade tropicale / estivale"
+              },
+              "description": {
+                "pt": "Alface, azeitonas, ananás, milho, pepino, cenoura, pimento, crutons e massa fria — molho de iogurte",
+                "en": "Lettuce, olives, pineapple, sweetcorn, cucumber, carrot, pepper, croutons and cold pasta — yoghurt dressing",
+                "fr": "Laitue, olives, ananas, maïs, concombre, carotte, poivron, croûtons et pâtes froides — sauce au yaourt"
+              },
+              "price": 7.5
+            },
+            {
+              "id": "salada-mar",
+              "name": {
+                "pt": "Salada do mar",
+                "en": "Seafood salad",
+                "fr": "Salade de la mer"
+              },
+              "description": {
+                "pt": "Delícias do mar, camarão, alface roxa, ananás, tomate e milho — molho cocktail",
+                "en": "Seafood sticks, prawns, red lettuce, pineapple, tomato and sweetcorn — cocktail sauce",
+                "fr": "Surimi, crevettes, laitue rouge, ananas, tomate et maïs — sauce cocktail"
+              },
+              "price": 7.5
+            },
+            {
+              "id": "salada-atum",
+              "name": {
+                "pt": "Salada de atum",
+                "en": "Tuna salad",
+                "fr": "Salade de thon"
+              },
+              "description": {
+                "pt": "Atum, cebola, ovo cozido, alface, tomate, pimento e azeitona — vinagrete ou maionese",
+                "en": "Tuna, onion, boiled egg, lettuce, tomato, pepper and olives — vinaigrette or mayonnaise",
+                "fr": "Thon, oignon, œuf dur, laitue, tomate, poivron et olives — vinaigrette ou mayonnaise"
+              },
+              "price": 7.5
+            }
+          ],
+          "figures": [
+            "images/ementa/salada.jpg"
+          ]
+        },
+        {
+          "id": "omeletes",
+          "name": {
+            "pt": "Omeletes",
+            "en": "Omelettes",
+            "fr": "Omelettes"
+          },
+          "note": {
+            "pt": "Arroz em todos os pratos.",
+            "en": "All dishes served with rice.",
+            "fr": "Tous les plats sont servis avec du riz."
+          },
+          "items": [
+            {
+              "id": "omelete-mista",
+              "name": {
+                "pt": "Omelete mista",
+                "en": "Mixed omelette",
+                "fr": "Omelette jambon-fromage"
+              },
+              "price": 6.5
+            },
+            {
+              "id": "omelete-queijo",
+              "name": {
+                "pt": "Omelete de queijo",
+                "en": "Cheese omelette",
+                "fr": "Omelette au fromage"
+              },
+              "price": 5.2
+            },
+            {
+              "id": "omelete-fiambre",
+              "name": {
+                "pt": "Omelete de fiambre",
+                "en": "Ham omelette",
+                "fr": "Omelette au jambon"
+              },
+              "price": 5.2
+            },
+            {
+              "id": "omelete-presunto",
+              "name": {
+                "pt": "Omelete de presunto",
+                "en": "Cured ham omelette",
+                "fr": "Omelette au jambon cru"
+              },
+              "price": 6.0
+            },
+            {
+              "id": "omelete-bacon",
+              "name": {
+                "pt": "Omelete de bacon",
+                "en": "Bacon omelette",
+                "fr": "Omelette au bacon"
+              },
+              "price": 6.0
+            }
+          ],
+          "figures": [
+            "images/ementa/omeletes-foto.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "snacks",
+      "name": {
+        "pt": "Snacks e pizzas",
+        "en": "Snacks & pizzas",
+        "fr": "Snacks et pizzas"
+      },
+      "subcategories": [
+        {
+          "id": "baguetes",
+          "name": {
+            "pt": "Baguetes",
+            "en": "Baguettes",
+            "fr": "Baguettes"
+          },
+          "items": [
+            {
+              "id": "baguete-americana",
+              "name": {
+                "pt": "Baguete americana",
+                "en": "American baguette",
+                "fr": "Baguette américaine"
+              },
+              "description": {
+                "pt": "Queijo, fiambre, alface, tomate e ovo cozido",
+                "en": "Cheese, ham, lettuce, tomato and boiled egg",
+                "fr": "Fromage, jambon, laitue, tomate et œuf dur"
+              },
+              "price": 5.0
+            },
+            {
+              "id": "baguete-atum",
+              "name": {
+                "pt": "Baguete de atum",
+                "en": "Tuna baguette",
+                "fr": "Baguette au thon"
+              },
+              "description": {
+                "pt": "Atum, alface, tomate e ovo cozido",
+                "en": "Tuna, lettuce, tomato and boiled egg",
+                "fr": "Thon, laitue, tomate et œuf dur"
+              },
+              "price": 5.0
+            },
+            {
+              "id": "baguete-panado",
+              "name": {
+                "pt": "Baguete de panado",
+                "en": "Breaded chicken baguette",
+                "fr": "Baguette au poulet pané"
+              },
+              "description": {
+                "pt": "Panado, alface e tomate",
+                "en": "Breaded chicken, lettuce and tomato",
+                "fr": "Poulet pané, laitue et tomate"
+              },
+              "price": 5.0
+            },
+            {
+              "id": "baguete-lombo",
+              "name": {
+                "pt": "Baguete de lombo",
+                "en": "Pork loin baguette",
+                "fr": "Baguette au filet de porc"
+              },
+              "description": {
+                "pt": "Lombo, bacon, queijo e cogumelos",
+                "en": "Pork loin, bacon, cheese and mushrooms",
+                "fr": "Filet de porc, bacon, fromage et champignons"
+              },
+              "price": 5.0
+            },
+            {
+              "id": "baguete-marisco",
+              "name": {
+                "pt": "Baguete de marisco",
+                "en": "Seafood baguette",
+                "fr": "Baguette au surimi"
+              },
+              "description": {
+                "pt": "Delícias do mar, alface e tomate",
+                "en": "Seafood sticks, lettuce and tomato",
+                "fr": "Surimi, laitue et tomate"
+              },
+              "price": 5.0
+            },
+            {
+              "id": "baguete-presunto",
+              "name": {
+                "pt": "Baguete de presunto",
+                "en": "Cured ham baguette",
+                "fr": "Baguette au jambon cru"
+              },
+              "description": {
+                "pt": "Presunto e queijo",
+                "en": "Cured ham and cheese",
+                "fr": "Jambon cru et fromage"
+              },
+              "price": 5.0
+            }
+          ],
+          "figures": [
+            "images/ementa/baguete.jpg"
+          ]
+        },
+        {
+          "id": "hamburgueres",
+          "name": {
+            "pt": "Hambúrgueres",
+            "en": "Burgers",
+            "fr": "Burgers"
+          },
+          "items": [
+            {
+              "id": "hamburguer-normal",
+              "name": {
+                "pt": "Hambúrguer normal",
+                "en": "Classic burger",
+                "fr": "Burger classique"
+              },
+              "description": {
+                "pt": "Hambúrguer, queijo, fiambre, alface e tomate",
+                "en": "Beef patty, cheese, ham, lettuce and tomato",
+                "fr": "Steak haché, fromage, jambon, laitue et tomate"
+              },
+              "price": 5.0
+            },
+            {
+              "id": "cheese-bacon",
+              "name": {
+                "pt": "Cheese bacon",
+                "en": "Cheese bacon",
+                "fr": "Cheese bacon"
+              },
+              "description": {
+                "pt": "Hambúrguer, queijo, fiambre, alface, tomate, ovo e bacon",
+                "en": "Beef patty, cheese, ham, lettuce, tomato, egg and bacon",
+                "fr": "Steak haché, fromage, jambon, laitue, tomate, œuf et bacon"
+              },
+              "price": 6.0
+            },
+            {
+              "id": "av-burger",
+              "name": {
+                "pt": "Av. Burger",
+                "en": "Av. Burger",
+                "fr": "Av. Burger"
+              },
+              "description": {
+                "pt": "Hambúrguer, queijo, alface, tomate, cebola, cogumelos e bacon",
+                "en": "Beef patty, cheese, lettuce, tomato, onion, mushrooms and bacon",
+                "fr": "Steak haché, fromage, laitue, tomate, oignon, champignons et bacon"
+              },
+              "price": 6.0
+            },
+            {
+              "id": "hamburguer-especial",
+              "name": {
+                "pt": "Hambúrguer especial",
+                "en": "Special burger",
+                "fr": "Burger spécial"
+              },
+              "description": {
+                "pt": "Hambúrguer, queijo, fiambre, batata e molho de francesinha",
+                "en": "Beef patty, cheese, ham, fries and francesinha sauce",
+                "fr": "Steak haché, fromage, jambon, frites et sauce francesinha"
+              },
+              "price": 7.0
+            },
+            {
+              "id": "hamburguer-frango",
+              "name": {
+                "pt": "Hambúrguer de frango",
+                "en": "Chicken burger",
+                "fr": "Burger au poulet"
+              },
+              "description": {
+                "pt": "Hambúrguer de frango, queijo, fiambre, alface e tomate",
+                "en": "Chicken patty, cheese, ham, lettuce and tomato",
+                "fr": "Steak de poulet, fromage, jambon, laitue et tomate"
+              },
+              "price": 4.0
+            },
+            {
+              "id": "crazy",
+              "name": {
+                "pt": "Crazy",
+                "en": "Crazy",
+                "fr": "Crazy"
+              },
+              "price": 4.0
+            }
+          ],
+          "figures": [
+            "images/ementa/hamburguer.jpg"
+          ]
+        },
+        {
+          "id": "francesinhas",
+          "name": {
+            "pt": "Francesinhas & cachorros",
+            "en": "Francesinhas & hot dogs",
+            "fr": "Francesinhas et hot-dogs"
+          },
+          "items": [
+            {
+              "id": "francesinha-normal",
+              "name": {
+                "pt": "Francesinha normal",
+                "en": "Classic francesinha",
+                "fr": "Francesinha classique"
+              },
+              "description": {
+                "pt": "Bife, salsicha ou linguiça, queijo e fiambre",
+                "en": "Steak, sausage or linguiça, cheese and ham",
+                "fr": "Steak, saucisse ou linguiça, fromage et jambon"
+              },
+              "price": 8.0
+            },
+            {
+              "id": "francesinha-especial",
+              "name": {
+                "pt": "Francesinha especial",
+                "en": "Special francesinha",
+                "fr": "Francesinha spéciale"
+              },
+              "description": {
+                "pt": "Bife, salsicha, linguiça, queijo, fiambre, ovo e batata",
+                "en": "Steak, sausage, linguiça, cheese, ham, egg and fries",
+                "fr": "Steak, saucisse, linguiça, fromage, jambon, œuf et frites"
+              },
+              "price": 10.0
+            },
+            {
+              "id": "francesinha-frango",
+              "name": {
+                "pt": "Francesinha de frango",
+                "en": "Chicken francesinha",
+                "fr": "Francesinha au poulet"
+              },
+              "description": {
+                "pt": "Bife de frango, queijo, fiambre, ovo e batata",
+                "en": "Chicken breast, cheese, ham, egg and fries",
+                "fr": "Filet de poulet, fromage, jambon, œuf et frites"
+              },
+              "price": 10.0
+            },
+            {
+              "id": "francesinha-avenida",
+              "name": {
+                "pt": "Francesinha Avenida",
+                "en": "Avenida francesinha",
+                "fr": "Francesinha Avenida"
+              },
+              "description": {
+                "pt": "Bife, salsicha, linguiça, criolo, queijo, fiambre, ovo e batata",
+                "en": "Steak, sausage, linguiça, criolo, cheese, ham, egg and fries",
+                "fr": "Steak, saucisse, linguiça, saucisse créole, fromage, jambon, œuf et frites"
+              },
+              "price": 10.0
+            },
+            {
+              "id": "cachorro-normal",
+              "name": {
+                "pt": "Cachorro normal",
+                "en": "Classic hot dog",
+                "fr": "Hot-dog classique"
+              },
+              "description": {
+                "pt": "Pão de baguete, salsicha, queijo, fiambre, alface e tomate",
+                "en": "Baguette, sausage, cheese, ham, lettuce and tomato",
+                "fr": "Baguette, saucisse, fromage, jambon, laitue et tomate"
+              },
+              "price": 5.0
+            },
+            {
+              "id": "cachorro-especial",
+              "name": {
+                "pt": "Cachorro especial",
+                "en": "Special hot dog",
+                "fr": "Hot-dog spécial"
+              },
+              "description": {
+                "pt": "Pão de baguete, queijo, fiambre, batata e molho de francesinha",
+                "en": "Baguette, cheese, ham, fries and francesinha sauce",
+                "fr": "Baguette, fromage, jambon, frites et sauce francesinha"
+              },
+              "price": 6.0
+            },
+            {
+              "id": "sr-cachorro",
+              "name": {
+                "pt": "Sr. Cachorro",
+                "en": "Sr. Cachorro",
+                "fr": "Sr. Cachorro"
+              },
+              "description": {
+                "pt": "Pão de baguete grande, queijo, fiambre, batata, molho de francesinha e batata palha",
+                "en": "Large baguette, cheese, ham, fries, francesinha sauce and shoestring potatoes",
+                "fr": "Grande baguette, fromage, jambon, frites, sauce francesinha et pommes allumettes"
+              },
+              "price": 8.0
+            },
+            {
+              "id": "tosta-mista-especial",
+              "name": {
+                "pt": "Tosta mista especial",
+                "en": "Special ham & cheese toastie",
+                "fr": "Croque jambon-fromage spécial"
+              },
+              "price": 4.0
+            }
+          ],
+          "figures": [
+            "images/ementa/francesinha.jpg"
+          ]
+        },
+        {
+          "id": "pizzas",
+          "name": {
+            "pt": "Pizzas",
+            "en": "Pizzas",
+            "fr": "Pizzas"
+          },
+          "note": {
+            "pt": "Tamanhos pequena e média.",
+            "en": "Small and medium sizes.",
+            "fr": "Tailles petite et moyenne."
+          },
+          "items": [
+            {
+              "id": "pizza-margarita",
+              "name": {
+                "pt": "Pizza Margarita",
+                "en": "Margherita pizza",
+                "fr": "Pizza Margherita"
+              },
+              "description": {
+                "pt": "Molho de tomate, queijo e orégãos",
+                "en": "Tomato sauce, cheese and oregano",
+                "fr": "Sauce tomate, fromage et origan"
+              },
+              "prices": [
+                {
+                  "size": "small",
+                  "value": 6.5
+                },
+                {
+                  "size": "medium",
+                  "value": 8.6
+                }
+              ]
+            },
+            {
+              "id": "pizza-prosciutto",
+              "name": {
+                "pt": "Pizza Prosciutto",
+                "en": "Prosciutto pizza",
+                "fr": "Pizza Prosciutto"
+              },
+              "description": {
+                "pt": "Molho de tomate, queijo, fiambre e orégãos",
+                "en": "Tomato sauce, cheese, ham and oregano",
+                "fr": "Sauce tomate, fromage, jambon et origan"
+              },
+              "prices": [
+                {
+                  "size": "small",
+                  "value": 7.6
+                },
+                {
+                  "size": "medium",
+                  "value": 8.9
+                }
+              ]
+            },
+            {
+              "id": "pizza-prosciutto-cogumelos",
+              "name": {
+                "pt": "Pizza Prosciutto com cogumelos",
+                "en": "Prosciutto & mushroom pizza",
+                "fr": "Pizza Prosciutto aux champignons"
+              },
+              "description": {
+                "pt": "Molho de tomate, queijo, fiambre, cogumelos e orégãos",
+                "en": "Tomato sauce, cheese, ham, mushrooms and oregano",
+                "fr": "Sauce tomate, fromage, jambon, champignons et origan"
+              },
+              "prices": [
+                {
+                  "size": "small",
+                  "value": 7.9
+                },
+                {
+                  "size": "medium",
+                  "value": 10.0
+                }
+              ]
+            },
+            {
+              "id": "pizza-chourico",
+              "name": {
+                "pt": "Pizza de chouriço",
+                "en": "Chouriço pizza",
+                "fr": "Pizza au chouriço"
+              },
+              "description": {
+                "pt": "Molho de tomate, queijo, chouriço e orégãos",
+                "en": "Tomato sauce, cheese, chouriço and oregano",
+                "fr": "Sauce tomate, fromage, chouriço et origan"
+              },
+              "prices": [
+                {
+                  "size": "small",
+                  "value": 7.5
+                },
+                {
+                  "size": "medium",
+                  "value": 9.9
+                }
+              ]
+            },
+            {
+              "id": "pizza-calzone",
+              "name": {
+                "pt": "Pizza Calzone",
+                "en": "Calzone",
+                "fr": "Calzone"
+              },
+              "description": {
+                "pt": "Molho de tomate, queijo, fiambre, ananás, chouriço, cogumelos e orégãos",
+                "en": "Tomato sauce, cheese, ham, pineapple, chouriço, mushrooms and oregano",
+                "fr": "Sauce tomate, fromage, jambon, ananas, chouriço, champignons et origan"
+              },
+              "prices": [
+                {
+                  "size": "small",
+                  "value": 7.9
+                },
+                {
+                  "size": "medium",
+                  "value": 10.9
+                }
+              ]
+            },
+            {
+              "id": "pizza-mar",
+              "name": {
+                "pt": "Pizza do Mar",
+                "en": "Seafood pizza",
+                "fr": "Pizza de la mer"
+              },
+              "description": {
+                "pt": "Molho de tomate, queijo, camarão, delícias do mar, ananás e orégãos",
+                "en": "Tomato sauce, cheese, prawns, seafood sticks, pineapple and oregano",
+                "fr": "Sauce tomate, fromage, crevettes, surimi, ananas et origan"
+              },
+              "prices": [
+                {
+                  "size": "small",
+                  "value": 7.9
+                },
+                {
+                  "size": "medium",
+                  "value": 10.9
+                }
+              ]
+            },
+            {
+              "id": "pizza-atum",
+              "name": {
+                "pt": "Pizza de atum",
+                "en": "Tuna pizza",
+                "fr": "Pizza au thon"
+              },
+              "description": {
+                "pt": "Molho de tomate, queijo, cebola, atum, azeitonas, pimentos e orégãos",
+                "en": "Tomato sauce, cheese, onion, tuna, olives, peppers and oregano",
+                "fr": "Sauce tomate, fromage, oignon, thon, olives, poivrons et origan"
+              },
+              "prices": [
+                {
+                  "size": "small",
+                  "value": 6.9
+                },
+                {
+                  "size": "medium",
+                  "value": 10.9
+                }
+              ]
+            },
+            {
+              "id": "pizza-4-estacoes",
+              "name": {
+                "pt": "Pizza 4 Estações",
+                "en": "Four seasons pizza",
+                "fr": "Pizza quatre saisons"
+              },
+              "description": {
+                "pt": "Molho de tomate, queijo, fiambre, chouriço, pimentos, cogumelos e orégãos",
+                "en": "Tomato sauce, cheese, ham, chouriço, peppers, mushrooms and oregano",
+                "fr": "Sauce tomate, fromage, jambon, chouriço, poivrons, champignons et origan"
+              },
+              "prices": [
+                {
+                  "size": "small",
+                  "value": 7.95
+                },
+                {
+                  "size": "medium",
+                  "value": 10.9
+                }
+              ]
+            },
+            {
+              "id": "pizza-kebab",
+              "name": {
+                "pt": "Pizza Kebab",
+                "en": "Kebab pizza",
+                "fr": "Pizza kebab"
+              },
+              "description": {
+                "pt": "Molho de tomate, queijo, carne de kebab e orégãos",
+                "en": "Tomato sauce, cheese, kebab meat and oregano",
+                "fr": "Sauce tomate, fromage, viande de kebab et origan"
+              },
+              "prices": [
+                {
+                  "size": "small",
+                  "value": 8.0
+                },
+                {
+                  "size": "medium",
+                  "value": 11.7
+                }
+              ]
+            },
+            {
+              "id": "pizza-cafe-avenida",
+              "name": {
+                "pt": "Pizza Café Avenida",
+                "en": "Café Avenida pizza",
+                "fr": "Pizza Café Avenida"
+              },
+              "description": {
+                "pt": "Molho de tomate, mozzarella, salame picante pepperoni, lascas de parmesão e tomate semi-seco",
+                "en": "Tomato sauce, mozzarella, spicy pepperoni, parmesan shavings and semi-dried tomatoes",
+                "fr": "Sauce tomate, mozzarella, pepperoni piquant, copeaux de parmesan et tomates semi-séchées"
+              },
+              "prices": [
+                {
+                  "size": "small",
+                  "value": 8.0
+                },
+                {
+                  "size": "medium",
+                  "value": 12.0
+                }
+              ]
+            },
+            {
+              "id": "pizza-presunto",
+              "name": {
+                "pt": "Pizza de presunto",
+                "en": "Cured ham pizza",
+                "fr": "Pizza au jambon cru"
+              },
+              "description": {
+                "pt": "Molho de tomate, queijo, presunto, cogumelos e orégãos",
+                "en": "Tomato sauce, cheese, cured ham, mushrooms and oregano",
+                "fr": "Sauce tomate, fromage, jambon cru, champignons et origan"
+              },
+              "prices": [
+                {
+                  "size": "small",
+                  "value": 8.8
+                },
+                {
+                  "size": "medium",
+                  "value": 11.7
+                }
+              ]
+            },
+            {
+              "id": "pizza-cachorro",
+              "name": {
+                "pt": "Pizza Cachorro",
+                "en": "Hot dog pizza",
+                "fr": "Pizza hot-dog"
+              },
+              "description": {
+                "pt": "Molho de tomate, queijo, fiambre, salsicha e batata palha",
+                "en": "Tomato sauce, cheese, ham, sausage and shoestring potatoes",
+                "fr": "Sauce tomate, fromage, jambon, saucisse et pommes allumettes"
+              },
+              "prices": [
+                {
+                  "size": "small",
+                  "value": 8.4
+                },
+                {
+                  "size": "medium",
+                  "value": 10.3
+                }
+              ]
+            },
+            {
+              "id": "pizza-bolonhesa",
+              "name": {
+                "pt": "Pizza Bolonhesa",
+                "en": "Bolognese pizza",
+                "fr": "Pizza bolognaise"
+              },
+              "description": {
+                "pt": "Molho de tomate, queijo e carne à bolonhesa",
+                "en": "Tomato sauce, cheese and bolognese meat",
+                "fr": "Sauce tomate, fromage et viande à la bolognaise"
+              },
+              "prices": [
+                {
+                  "size": "small",
+                  "value": 8.0
+                },
+                {
+                  "size": "medium",
+                  "value": 11.7
+                }
+              ]
+            },
+            {
+              "id": "pao-alho-queijo",
+              "name": {
+                "pt": "Pão de alho com queijo",
+                "en": "Garlic bread with cheese",
+                "fr": "Pain à l’ail et au fromage"
+              },
+              "price": 2.5
+            },
+            {
+              "id": "pao-alho-bacon-queijo",
+              "name": {
+                "pt": "Pão de alho, bacon e queijo",
+                "en": "Garlic bread, bacon and cheese",
+                "fr": "Pain à l’ail, au bacon et au fromage"
+              },
+              "price": 3.0
+            },
+            {
+              "id": "pao-chourico",
+              "name": {
+                "pt": "Pão com chouriço",
+                "en": "Chouriço bread",
+                "fr": "Pain au chouriço"
+              },
+              "price": 3.0
+            },
+            {
+              "id": "pao-chourico-queijo",
+              "name": {
+                "pt": "Pão com chouriço e queijo",
+                "en": "Chouriço and cheese bread",
+                "fr": "Pain au chouriço et au fromage"
+              },
+              "price": 4.0
+            },
+            {
+              "id": "pao-a-la-joy",
+              "name": {
+                "pt": "Pão à la Joy",
+                "en": "Pão à la Joy",
+                "fr": "Pão à la Joy"
+              },
+              "description": {
+                "pt": "Chouriço, queijo e salsicha picante",
+                "en": "Chouriço, cheese and spicy sausage",
+                "fr": "Chouriço, fromage et saucisse piquante"
+              },
+              "price": 5.0
+            },
+            {
+              "id": "ingrediente-extra",
+              "name": {
+                "pt": "Ingrediente extra",
+                "en": "Extra topping",
+                "fr": "Supplément"
+              },
+              "price": 1.0
+            }
+          ],
+          "figures": [
+            "images/ementa/pizza.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sobremesas",
+      "name": {
+        "pt": "Sobremesas",
+        "en": "Desserts",
+        "fr": "Desserts"
+      },
+      "subcategories": [
+        {
+          "id": "crepes",
+          "name": {
+            "pt": "Crepes",
+            "en": "Crêpes",
+            "fr": "Crêpes"
+          },
+          "items": [
+            {
+              "id": "crepes-crepe-avenida",
+              "name": {
+                "pt": "Crepe Avenida",
+                "en": "Avenida crêpe",
+                "fr": "Crêpe Avenida"
+              },
+              "price": 6.0,
+              "description": {
+                "pt": "Nutella, morangos e banana",
+                "en": "Nutella, strawberries and banana",
+                "fr": "Nutella, fraises et banane"
+              }
+            },
+            {
+              "id": "crepes-crepe-simples",
+              "name": {
+                "pt": "Crepe simples",
+                "en": "Nutella crêpe",
+                "fr": "Crêpe au Nutella"
+              },
+              "price": 4.0,
+              "description": {
+                "pt": "Com Nutella",
+                "en": "With Nutella",
+                "fr": "Au Nutella"
+              }
+            },
+            {
+              "id": "crepes-crepe-com-fruta-e-topping",
+              "name": {
+                "pt": "Crepe com fruta e topping",
+                "en": "Crêpe with fruit and topping",
+                "fr": "Crêpe aux fruits et nappage"
+              },
+              "price": 6.5,
+              "description": {
+                "pt": "Fruta e um topping",
+                "en": "Fruit and one topping",
+                "fr": "Fruits et un nappage"
+              }
+            },
+            {
+              "id": "crepes-crepe-com-fruta-gelado-e-topping",
+              "name": {
+                "pt": "Crepe com fruta, gelado e topping",
+                "en": "Crêpe with fruit, ice cream and topping",
+                "fr": "Crêpe aux fruits, glace et nappage"
+              },
+              "price": 7.5,
+              "description": {
+                "pt": "Fruta, uma bola de gelado à escolha e um topping",
+                "en": "Fruit, one scoop of ice cream of your choice and one topping",
+                "fr": "Fruits, une boule de glace au choix et un nappage"
+              }
+            }
+          ],
+          "figures": [
+            "images/ementa/sobremesas-foto.jpg"
+          ]
+        },
+        {
+          "id": "petit-gateaux",
+          "name": {
+            "pt": "Petit gâteau",
+            "en": "Chocolate fondant",
+            "fr": "Fondant au chocolat"
+          },
+          "items": [
+            {
+              "id": "sobremesas-petit-gateau-de-chocolate",
+              "name": {
+                "pt": "Petit gâteau de chocolate",
+                "en": "Chocolate fondant",
+                "fr": "Fondant au chocolat"
+              },
+              "price": 5.5,
+              "description": {
+                "pt": "Com bola de gelado de baunilha e bolacha ralada",
+                "en": "With vanilla ice cream and biscuit crumbs",
+                "fr": "Avec une boule de glace à la vanille et des biscuits émiettés"
+              }
+            }
+          ],
+          "figures": [
+            "images/ementa/petit-gateaux-foto.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pastelaria",
+      "name": {
+        "pt": "Pastelaria e tostas",
+        "en": "Pastries & toast",
+        "fr": "Viennoiseries et tartines"
+      },
+      "subcategories": [
+        {
+          "id": "croissants",
+          "name": {
+            "pt": "Croissants",
+            "en": "Croissants",
+            "fr": "Croissants"
+          },
+          "items": [
+            {
+              "id": "cafetaria-croissant-com-fiambre",
+              "name": {
+                "pt": "Croissant com fiambre",
+                "en": "Ham croissant",
+                "fr": "Croissant au jambon"
+              },
+              "price": 1.9
+            },
+            {
+              "id": "cafetaria-croissant-com-queijo",
+              "name": {
+                "pt": "Croissant com queijo",
+                "en": "Cheese croissant",
+                "fr": "Croissant au fromage"
+              },
+              "price": 1.9
+            },
+            {
+              "id": "cafetaria-croissant-misto",
+              "name": {
+                "pt": "Croissant misto",
+                "en": "Ham and cheese croissant",
+                "fr": "Croissant au jambon et au fromage"
+              },
+              "price": 2.0
+            },
+            {
+              "id": "cafetaria-croissant-com-manteiga",
+              "name": {
+                "pt": "Croissant com manteiga",
+                "en": "Butter croissant",
+                "fr": "Croissant au beurre"
+              },
+              "price": 1.5
+            }
+          ],
+          "figures": [
+            "images/ementa/pastelaria-foto.jpg"
+          ]
+        },
+        {
+          "id": "torradas-tostas",
+          "name": {
+            "pt": "Torradas e tostas",
+            "en": "Toast & toasted sandwiches",
+            "fr": "Tartines et croque-monsieur"
+          },
+          "items": [
+            {
+              "id": "cafetaria-meia-torrada",
+              "name": {
+                "pt": "Meia torrada",
+                "en": "Half portion of toast",
+                "fr": "Demi-portion de pain grillé"
+              },
+              "price": 0.8
+            },
+            {
+              "id": "cafetaria-torrada",
+              "name": {
+                "pt": "Torrada",
+                "en": "Toast",
+                "fr": "Pain grillé"
+              },
+              "price": 1.5
+            },
+            {
+              "id": "cafetaria-tosta-mista",
+              "name": {
+                "pt": "Tosta mista",
+                "en": "Ham and cheese toastie",
+                "fr": "Croque jambon-fromage"
+              },
+              "price": 2.0
+            },
+            {
+              "id": "cafetaria-tosta-de-fiambre",
+              "name": {
+                "pt": "Tosta de fiambre",
+                "en": "Ham toastie",
+                "fr": "Toast au jambon"
+              },
+              "price": 1.7
+            },
+            {
+              "id": "cafetaria-tosta-de-queijo",
+              "name": {
+                "pt": "Tosta de queijo",
+                "en": "Cheese toastie",
+                "fr": "Toast au fromage"
+              },
+              "price": 1.7
+            }
+          ],
+          "figures": [
+            "images/ementa/torradas-tostas-foto.jpg"
+          ]
+        },
+        {
+          "id": "pao",
+          "name": {
+            "pt": "Pão e sandes",
+            "en": "Bread & sandwiches",
+            "fr": "Pain et sandwichs"
+          },
+          "items": [
+            {
+              "id": "cafetaria-pao-simples",
+              "name": {
+                "pt": "Pão simples",
+                "en": "Plain bread",
+                "fr": "Pain nature"
+              },
+              "price": 0.4
+            },
+            {
+              "id": "cafetaria-pao-com-manteiga",
+              "name": {
+                "pt": "Pão com manteiga",
+                "en": "Bread with butter",
+                "fr": "Pain au beurre"
+              },
+              "price": 0.8
+            },
+            {
+              "id": "cafetaria-pao-misto",
+              "name": {
+                "pt": "Pão misto",
+                "en": "Ham and cheese roll",
+                "fr": "Pain au jambon et au fromage"
+              },
+              "price": 1.7
+            },
+            {
+              "id": "cafetaria-pao-com-fiambre",
+              "name": {
+                "pt": "Pão com fiambre",
+                "en": "Ham roll",
+                "fr": "Pain au jambon"
+              },
+              "price": 1.5
+            },
+            {
+              "id": "cafetaria-pao-com-queijo",
+              "name": {
+                "pt": "Pão com queijo",
+                "en": "Cheese roll",
+                "fr": "Pain au fromage"
+              },
+              "price": 1.5
+            },
+            {
+              "id": "cafetaria-pao-escuro-com-manteiga",
+              "name": {
+                "pt": "Pão escuro com manteiga",
+                "en": "Brown bread with butter",
+                "fr": "Pain complet au beurre"
+              },
+              "price": 1.0
+            },
+            {
+              "id": "cafetaria-mista-em-pao-escuro",
+              "name": {
+                "pt": "Mista em pão escuro",
+                "en": "Ham and cheese on brown bread",
+                "fr": "Pain complet au jambon et au fromage"
+              },
+              "price": 1.9
+            },
+            {
+              "id": "cafetaria-pao-escuro-com-fiambre",
+              "name": {
+                "pt": "Pão escuro com fiambre",
+                "en": "Brown bread with ham",
+                "fr": "Pain complet au jambon"
+              },
+              "price": 1.6
+            },
+            {
+              "id": "cafetaria-pao-escuro-com-queijo",
+              "name": {
+                "pt": "Pão escuro com queijo",
+                "en": "Brown bread with cheese",
+                "fr": "Pain complet au fromage"
+              },
+              "price": 1.6
+            }
+          ],
+          "figures": [
+            "images/ementa/pao-foto.jpg"
+          ]
+        },
+        {
+          "id": "bolos",
+          "name": {
+            "pt": "Bolos",
+            "en": "Cakes",
+            "fr": "Gâteaux"
+          },
+          "items": [
+            {
+              "id": "cafetaria-bolo",
+              "name": {
+                "pt": "Bolo",
+                "en": "Cake",
+                "fr": "Gâteau"
+              },
+              "price": 1.6
+            }
+          ],
+          "figures": [
+            "images/ementa/bolos-foto.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cafetaria",
+      "name": {
+        "pt": "Cafetaria",
+        "en": "Coffee & hot drinks",
+        "fr": "Café et boissons chaudes"
+      },
+      "items": [
+        {
+          "id": "cafetaria-cafe",
+          "name": {
+            "pt": "Café",
+            "en": "Espresso",
+            "fr": "Expresso"
+          },
+          "price": 1.0
+        },
+        {
+          "id": "cafetaria-descafeinado",
+          "name": {
+            "pt": "Descafeinado",
+            "en": "Decaf coffee",
+            "fr": "Décaféiné"
+          },
+          "price": 1.0
+        },
+        {
+          "id": "cafetaria-carioca-de-cafe",
+          "name": {
+            "pt": "Carioca de café",
+            "en": "Light coffee",
+            "fr": "Café léger"
+          },
+          "price": 0.9
+        },
+        {
+          "id": "cafetaria-carioca-de-limao",
+          "name": {
+            "pt": "Carioca de limão",
+            "en": "Lemon peel infusion",
+            "fr": "Infusion de zeste de citron"
+          },
+          "price": 0.8
+        },
+        {
+          "id": "cafetaria-cevada",
+          "name": {
+            "pt": "Cevada",
+            "en": "Barley coffee",
+            "fr": "Boisson à l’orge"
+          },
+          "price": 0.9
+        },
+        {
+          "id": "cafetaria-pingo",
+          "name": {
+            "pt": "Pingo",
+            "en": "Espresso with a dash of milk",
+            "fr": "Expresso avec une touche de lait"
+          },
+          "price": 1.0
+        },
+        {
+          "id": "cafetaria-meia-de-leite",
+          "name": {
+            "pt": "Meia de leite",
+            "en": "Coffee with milk",
+            "fr": "Café au lait"
+          },
+          "price": 1.5
+        },
+        {
+          "id": "cafetaria-galao",
+          "name": {
+            "pt": "Galão",
+            "en": "Portuguese latte",
+            "fr": "Galão — café au lait en verre"
+          },
+          "price": 1.5
+        },
+        {
+          "id": "cafetaria-cappuccino-pequeno",
+          "name": {
+            "pt": "Cappuccino pequeno",
+            "en": "Small cappuccino",
+            "fr": "Petit cappuccino"
+          },
+          "price": 1.4
+        },
+        {
+          "id": "cafetaria-cappuccino-grande",
+          "name": {
+            "pt": "Cappuccino grande",
+            "en": "Large cappuccino",
+            "fr": "Grand cappuccino"
+          },
+          "price": 1.9
+        },
+        {
+          "id": "cafetaria-leite-chocolatado-agros",
+          "name": {
+            "pt": "Leite chocolatado Agros",
+            "en": "Agros chocolate milk",
+            "fr": "Lait chocolaté Agros"
+          },
+          "price": 1.2
+        },
+        {
+          "id": "cafetaria-copo-de-leite",
+          "name": {
+            "pt": "Copo de leite",
+            "en": "Glass of milk",
+            "fr": "Verre de lait"
+          },
+          "price": 1.0
+        },
+        {
+          "id": "cafetaria-cha",
+          "name": {
+            "pt": "Chá",
+            "en": "Tea",
+            "fr": "Thé"
+          },
+          "price": 1.4
+        },
+        {
+          "id": "cafetaria-ucal",
+          "name": {
+            "pt": "Ucal",
+            "en": "Ucal chocolate milk",
+            "fr": "Lait chocolaté Ucal"
+          },
+          "price": 1.6
+        },
+        {
+          "id": "cafetaria-chocolate-quente-pequeno",
+          "name": {
+            "pt": "Chocolate quente pequeno",
+            "en": "Small hot chocolate",
+            "fr": "Petit chocolat chaud"
+          },
+          "price": 1.5
+        },
+        {
+          "id": "cafetaria-chocolate-quente-grande",
+          "name": {
+            "pt": "Chocolate quente grande",
+            "en": "Large hot chocolate",
+            "fr": "Grand chocolat chaud"
+          },
+          "price": 1.8
+        },
+        {
+          "id": "cafetaria-chocolate-quente-espesso-pequeno",
+          "name": {
+            "pt": "Chocolate quente espesso pequeno",
+            "en": "Small thick hot chocolate",
+            "fr": "Petit chocolat chaud épais"
+          },
+          "price": 1.6
+        },
+        {
+          "id": "cafetaria-chocolate-quente-espesso-grande",
+          "name": {
+            "pt": "Chocolate quente espesso grande",
+            "en": "Large thick hot chocolate",
+            "fr": "Grand chocolat chaud épais"
+          },
+          "price": 2.1
+        }
+      ],
+      "figures": [
+        "images/ementa/cafetaria-foto.jpg"
+      ]
+    },
+    {
+      "id": "bebidas",
+      "name": {
+        "pt": "Bebidas",
+        "en": "Drinks",
+        "fr": "Boissons"
+      },
+      "subcategories": [
+        {
+          "id": "aguas-refrigerantes",
+          "name": {
+            "pt": "Águas, sumos e refrigerantes",
+            "en": "Water, juices & soft drinks",
+            "fr": "Eaux, jus et sodas"
+          },
+          "items": [
+            {
+              "id": "bebidas-refrigerante-de-lata",
+              "name": {
+                "pt": "Refrigerante de lata",
+                "en": "Canned soft drink",
+                "fr": "Soda en canette"
+              },
+              "price": 1.8
+            },
+            {
+              "id": "bebidas-red-bull",
+              "name": {
+                "pt": "Red Bull",
+                "en": "Red Bull",
+                "fr": "Red Bull"
+              },
+              "price": 3.0
+            },
+            {
+              "id": "bebidas-agua-de-sabores",
+              "name": {
+                "pt": "Água de sabores",
+                "en": "Flavoured water",
+                "fr": "Eau aromatisée"
+              },
+              "price": 1.8
+            },
+            {
+              "id": "bebidas-agua-sem-gas",
+              "name": {
+                "pt": "Água sem gás",
+                "en": "Still water",
+                "fr": "Eau plate"
+              },
+              "price": 1.0
+            },
+            {
+              "id": "bebidas-agua-com-gas",
+              "name": {
+                "pt": "Água com gás",
+                "en": "Sparkling water",
+                "fr": "Eau gazeuse"
+              },
+              "price": 1.5
+            },
+            {
+              "id": "bebidas-agua-castelo",
+              "name": {
+                "pt": "Água Castelo",
+                "en": "Castelo sparkling water",
+                "fr": "Eau gazeuse Castelo"
+              },
+              "price": 1.5
+            },
+            {
+              "id": "bebidas-agua-tonica",
+              "name": {
+                "pt": "Água tónica",
+                "en": "Tonic water",
+                "fr": "Tonic"
+              },
+              "price": 1.8
+            },
+            {
+              "id": "bebidas-compal",
+              "name": {
+                "pt": "Compal",
+                "en": "Compal juice",
+                "fr": "Jus Compal"
+              },
+              "price": 1.8
+            },
+            {
+              "id": "bebidas-b",
+              "name": {
+                "pt": "B!",
+                "en": "B! juice drink",
+                "fr": "Boisson B!"
+              },
+              "price": 1.8
+            },
+            {
+              "id": "bebidas-santal",
+              "name": {
+                "pt": "Santal",
+                "en": "Santal juice",
+                "fr": "Jus Santal"
+              },
+              "price": 1.8
+            },
+            {
+              "id": "bebidas-ginger-ale",
+              "name": {
+                "pt": "Ginger ale",
+                "en": "Ginger ale",
+                "fr": "Ginger ale"
+              },
+              "price": 1.8
+            },
+            {
+              "id": "bebidas-coca-cola",
+              "name": {
+                "pt": "Coca-Cola",
+                "en": "Coca-Cola",
+                "fr": "Coca-Cola"
+              },
+              "price": 1.8
+            },
+            {
+              "id": "bebidas-coca-cola-0-25-l",
+              "name": {
+                "pt": "Coca-Cola 0,25 L",
+                "en": "Coca-Cola 0.25 L",
+                "fr": "Coca-Cola 0,25 L"
+              },
+              "price": 1.6
+            },
+            {
+              "id": "bebidas-7-up",
+              "name": {
+                "pt": "7 Up",
+                "en": "7 Up",
+                "fr": "7 Up"
+              },
+              "price": 1.8
+            },
+            {
+              "id": "bebidas-sumol",
+              "name": {
+                "pt": "Sumol",
+                "en": "Sumol",
+                "fr": "Sumol"
+              },
+              "price": 1.8
+            },
+            {
+              "id": "bebidas-agua-1-5-l",
+              "name": {
+                "pt": "Água 1,5 L",
+                "en": "Water 1.5 L",
+                "fr": "Eau 1,5 L"
+              },
+              "price": 1.7
+            },
+            {
+              "id": "bebidas-sumos-1-5-l",
+              "name": {
+                "pt": "Sumos 1,5 L",
+                "en": "Juice 1.5 L",
+                "fr": "Jus 1,5 L"
+              },
+              "price": 3.5
+            }
+          ],
+          "figures": [
+            "images/ementa/aguas-refrigerantes-foto.jpg"
+          ]
+        },
+        {
+          "id": "cervejas",
+          "name": {
+            "pt": "Cervejas e sidras",
+            "en": "Beers & cider",
+            "fr": "Bières et cidres"
+          },
+          "items": [
+            {
+              "id": "bebidas-cerveja-super-bock",
+              "name": {
+                "pt": "Cerveja Super Bock",
+                "en": "Super Bock beer",
+                "fr": "Bière Super Bock"
+              },
+              "price": 1.5
+            },
+            {
+              "id": "bebidas-cerveja-heineken",
+              "name": {
+                "pt": "Cerveja Heineken",
+                "en": "Heineken beer",
+                "fr": "Bière Heineken"
+              },
+              "price": 1.7
+            },
+            {
+              "id": "bebidas-cerveja-sagres",
+              "name": {
+                "pt": "Cerveja Sagres",
+                "en": "Sagres beer",
+                "fr": "Bière Sagres"
+              },
+              "price": 1.7
+            },
+            {
+              "id": "bebidas-cerveja-sem-alcool",
+              "name": {
+                "pt": "Cerveja sem álcool",
+                "en": "Alcohol-free beer",
+                "fr": "Bière sans alcool"
+              },
+              "price": 1.7
+            },
+            {
+              "id": "bebidas-cerveja-preta",
+              "name": {
+                "pt": "Cerveja preta",
+                "en": "Dark beer",
+                "fr": "Bière brune"
+              },
+              "price": 1.7
+            },
+            {
+              "id": "bebidas-sagres-bohemia",
+              "name": {
+                "pt": "Sagres Bohemia",
+                "en": "Sagres Bohemia",
+                "fr": "Sagres Bohemia"
+              },
+              "price": 1.7
+            },
+            {
+              "id": "bebidas-mini-sagres-super-bock",
+              "name": {
+                "pt": "Mini Sagres / Super Bock",
+                "en": "Small Sagres / Super Bock",
+                "fr": "Petite Sagres / Super Bock"
+              },
+              "price": 1.3
+            },
+            {
+              "id": "bebidas-somersby",
+              "name": {
+                "pt": "Somersby",
+                "en": "Somersby cider",
+                "fr": "Cidre Somersby"
+              },
+              "price": 3.0
+            },
+            {
+              "id": "bebidas-fino",
+              "name": {
+                "pt": "Fino",
+                "en": "Draught beer",
+                "fr": "Bière pression"
+              },
+              "price": 1.5
+            },
+            {
+              "id": "bebidas-fino-heineken",
+              "name": {
+                "pt": "Fino Heineken",
+                "en": "Heineken draught beer",
+                "fr": "Heineken pression"
+              },
+              "price": 1.8
+            },
+            {
+              "id": "bebidas-principe",
+              "name": {
+                "pt": "Príncipe",
+                "en": "Medium draught beer",
+                "fr": "Bière pression moyenne"
+              },
+              "price": 2.1
+            },
+            {
+              "id": "bebidas-caneca-de-cerveja",
+              "name": {
+                "pt": "Caneca de cerveja",
+                "en": "Beer mug",
+                "fr": "Chope de bière"
+              },
+              "price": 3.2
+            }
+          ],
+          "figures": [
+            "images/ementa/bebidas-foto.jpg"
+          ]
+        },
+        {
+          "id": "vinhos",
+          "name": {
+            "pt": "Vinhos",
+            "en": "Wines",
+            "fr": "Vins"
+          },
+          "items": [
+            {
+              "id": "vinhos-copo-de-vinho",
+              "name": {
+                "pt": "Copo de vinho",
+                "en": "Glass of wine",
+                "fr": "Verre de vin"
+              },
+              "price": 1.2
+            },
+            {
+              "id": "vinhos-monte-velho",
+              "name": {
+                "pt": "Monte Velho",
+                "en": "Monte Velho",
+                "fr": "Monte Velho"
+              },
+              "price": 11.0
+            },
+            {
+              "id": "vinhos-esteva",
+              "name": {
+                "pt": "Esteva",
+                "en": "Esteva",
+                "fr": "Esteva"
+              },
+              "price": 11.0
+            },
+            {
+              "id": "vinhos-papa-figos",
+              "name": {
+                "pt": "Papa Figos",
+                "en": "Papa Figos",
+                "fr": "Papa Figos"
+              },
+              "price": 12.0
+            },
+            {
+              "id": "vinhos-vilacetinho",
+              "name": {
+                "pt": "Vilacetinho",
+                "en": "Vilacetinho",
+                "fr": "Vilacetinho"
+              },
+              "price": 5.5
+            },
+            {
+              "id": "vinhos-muralhas",
+              "name": {
+                "pt": "Muralhas",
+                "en": "Muralhas",
+                "fr": "Muralhas"
+              },
+              "price": 9.0
+            },
+            {
+              "id": "vinhos-ouro-verde",
+              "name": {
+                "pt": "Ouro Verde",
+                "en": "Ouro Verde",
+                "fr": "Ouro Verde"
+              },
+              "price": 6.0
+            },
+            {
+              "id": "vinhos-arca-nova",
+              "name": {
+                "pt": "Arca Nova",
+                "en": "Arca Nova",
+                "fr": "Arca Nova"
+              },
+              "price": 14.0
+            },
+            {
+              "id": "vinhos-casal-garcia",
+              "name": {
+                "pt": "Casal Garcia",
+                "en": "Casal Garcia",
+                "fr": "Casal Garcia"
+              },
+              "price": 10.0
+            },
+            {
+              "id": "vinhos-boelho-velho",
+              "name": {
+                "pt": "Boelho Velho",
+                "en": "Boelho Velho",
+                "fr": "Boelho Velho"
+              },
+              "price": 12.0
+            },
+            {
+              "id": "vinhos-quinta-das-camelias",
+              "name": {
+                "pt": "Quinta das Camélias",
+                "en": "Quinta das Camélias",
+                "fr": "Quinta das Camélias"
+              },
+              "price": 12.0
+            },
+            {
+              "id": "vinhos-planalto",
+              "name": {
+                "pt": "Planalto",
+                "en": "Planalto",
+                "fr": "Planalto"
+              },
+              "price": 14.0
+            },
+            {
+              "id": "vinhos-duas-quintas",
+              "name": {
+                "pt": "Duas Quintas",
+                "en": "Duas Quintas",
+                "fr": "Duas Quintas"
+              },
+              "price": 24.0
+            },
+            {
+              "id": "vinhos-burmester",
+              "name": {
+                "pt": "Burmester",
+                "en": "Burmester",
+                "fr": "Burmester"
+              },
+              "price": 12.0
+            },
+            {
+              "id": "vinhos-santero",
+              "name": {
+                "pt": "Santero",
+                "en": "Santero",
+                "fr": "Santero"
+              },
+              "price": 15.0
+            }
+          ],
+          "figures": [
+            "images/ementa/vinhos-foto.jpg"
+          ]
+        },
+        {
+          "id": "sangria",
+          "name": {
+            "pt": "Sangria",
+            "en": "Sangria",
+            "fr": "Sangria"
+          },
+          "items": [
+            {
+              "id": "sangria-sangria-de-espumante",
+              "name": {
+                "pt": "Sangria de espumante",
+                "en": "Sparkling wine sangria",
+                "fr": "Sangria au vin mousseux"
+              },
+              "price": 18.0
+            },
+            {
+              "id": "sangria-sangria-de-vinho",
+              "name": {
+                "pt": "Sangria de vinho",
+                "en": "Wine sangria",
+                "fr": "Sangria au vin"
+              },
+              "price": 15.0
+            }
+          ],
+          "figures": [
+            "images/ementa/sangria-foto.jpg"
+          ]
+        },
+        {
+          "id": "espirituosas",
+          "name": {
+            "pt": "Bebidas brancas",
+            "en": "Spirits & aperitifs",
+            "fr": "Spiritueux et apéritifs"
+          },
+          "items": [
+            {
+              "id": "espirituosas-vinho-do-porto",
+              "name": {
+                "pt": "Vinho do Porto",
+                "en": "Port wine",
+                "fr": "Vin de Porto"
+              },
+              "price": 1.6
+            },
+            {
+              "id": "espirituosas-vinho-do-porto-velho",
+              "name": {
+                "pt": "Vinho do Porto velho",
+                "en": "Aged port wine",
+                "fr": "Vieux Porto"
+              },
+              "price": 3.5
+            },
+            {
+              "id": "espirituosas-antiqua",
+              "name": {
+                "pt": "Antiqua",
+                "en": "Antiqua",
+                "fr": "Antiqua"
+              },
+              "price": 3.0
+            },
+            {
+              "id": "espirituosas-crf",
+              "name": {
+                "pt": "CRF",
+                "en": "CRF",
+                "fr": "CRF"
+              },
+              "price": 3.0
+            },
+            {
+              "id": "espirituosas-favaios",
+              "name": {
+                "pt": "Favaios",
+                "en": "Favaios",
+                "fr": "Favaios"
+              },
+              "price": 1.6
+            },
+            {
+              "id": "espirituosas-favaios-com-cerveja-0-30-l",
+              "name": {
+                "pt": "Favaios com cerveja 0,30 L",
+                "en": "Favaios with beer 0.30 L",
+                "fr": "Favaios avec bière 0,30 L"
+              },
+              "price": 2.0
+            },
+            {
+              "id": "espirituosas-martini",
+              "name": {
+                "pt": "Martini",
+                "en": "Martini",
+                "fr": "Martini"
+              },
+              "price": 1.5
+            },
+            {
+              "id": "espirituosas-martini-com-cerveja-0-30-l",
+              "name": {
+                "pt": "Martini com cerveja 0,30 L",
+                "en": "Martini with beer 0.30 L",
+                "fr": "Martini avec bière 0,30 L"
+              },
+              "price": 2.0
+            },
+            {
+              "id": "espirituosas-whisky-novo",
+              "name": {
+                "pt": "Whisky novo",
+                "en": "Young whisky",
+                "fr": "Whisky jeune"
+              },
+              "price": 5.0
+            },
+            {
+              "id": "espirituosas-whisky-velho",
+              "name": {
+                "pt": "Whisky velho",
+                "en": "Aged whisky",
+                "fr": "Whisky vieilli"
+              },
+              "price": 6.5
+            },
+            {
+              "id": "espirituosas-licor-beirao",
+              "name": {
+                "pt": "Licor Beirão",
+                "en": "Licor Beirão",
+                "fr": "Licor Beirão"
+              },
+              "price": 3.0
+            },
+            {
+              "id": "espirituosas-bagaco",
+              "name": {
+                "pt": "Bagaço",
+                "en": "Grape marc spirit",
+                "fr": "Eau-de-vie de marc"
+              },
+              "price": 0.7
+            },
+            {
+              "id": "espirituosas-tracado",
+              "name": {
+                "pt": "Traçado",
+                "en": "Traçado",
+                "fr": "Traçado"
+              },
+              "price": 0.75
+            },
+            {
+              "id": "espirituosas-amendoa-amarga",
+              "name": {
+                "pt": "Amêndoa amarga",
+                "en": "Bitter almond liqueur",
+                "fr": "Liqueur d’amande amère"
+              },
+              "price": 2.5
+            },
+            {
+              "id": "espirituosas-brandy-0-30-cl",
+              "name": {
+                "pt": "Brandy 0,30 cl",
+                "en": "Brandy 0.30 cl",
+                "fr": "Brandy 0,30 cl"
+              },
+              "price": 2.5
+            }
+          ],
+          "figures": [
+            "images/ementa/espirituosas-foto.jpg"
+          ]
+        }
+      ]
+    }
+  ]
+}

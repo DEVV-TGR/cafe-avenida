@@ -1,0 +1,11 @@
+# Netlify — cabeçalhos de segurança (outros alojamentos ignoram este ficheiro; ver README → Publicar).
+# A CSP principal está na <meta> de cada página; aqui só vai o que uma <meta> não consegue definir.
+# HSTS sem includeSubDomains/preload: decidir quando o domínio final estiver escolhido.
+/*
+  Strict-Transport-Security: max-age=31536000
+  Content-Security-Policy: frame-ancestors 'self'; upgrade-insecure-requests
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), browsing-topics=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin

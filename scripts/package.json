@@ -1,0 +1,13 @@
+{
+  "name": "cafe-avenida-scripts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate-qr": "node generate-qr.mjs",
+    "mapa": "node desenhar-mapa.mjs",
+    "mapa:cache": "node desenhar-mapa.mjs --cache"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  }
+}
