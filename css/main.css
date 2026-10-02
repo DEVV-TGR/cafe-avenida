@@ -76,9 +76,15 @@ a:hover {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--color-secondary);
   outline-offset: 3px;
   border-radius: 4px;
+}
+
+.hero :focus-visible,
+.site-footer :focus-visible,
+.lightbox :focus-visible {
+  outline-color: #f5eee3;
 }
 
 .skip-link {
@@ -111,6 +117,11 @@ a:hover {
 /* Sections */
 .section {
   padding: clamp(3.75rem, 8vw, 6rem) var(--page-pad);
+}
+
+/* Salto pelo menu: o topo do conteúdo fica 1rem abaixo da barra fixa (o padding da secção já conta). */
+main > .section[id] {
+  scroll-margin-top: max(0px, calc(var(--barra-afast) + var(--barra-alto) + 1rem - clamp(3.75rem, 8vw, 6rem)));
 }
 
 .section--surface {
@@ -435,7 +446,6 @@ a:hover {
   background: color-mix(in srgb, var(--color-primary) 16%, transparent);
   border-color: var(--color-primary);
   color: var(--color-secondary);
-  outline: none;
 }
 
 /* Cinco imagens em destaque; as restantes mantêm uma grelha regular. */
@@ -455,7 +465,7 @@ a:hover {
 }
 .gallery:not(.is-expanded) .is-gallery-more { display: none; }
 .gallery__more:not([hidden]) { display: flex; align-items: center; justify-content: center; }
-.gallery__item:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 4px; }
+.gallery__item:focus-visible { outline: 3px solid var(--color-secondary); outline-offset: 4px; }
 @media (max-width: 63.99rem) {
   .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 12rem; }
   .gallery__item:first-child { grid-row: span 1; }
@@ -529,7 +539,7 @@ a:hover {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--color-text) 72%, transparent);
+  color: #574b42;
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, var(--color-primary) 55%, transparent);
   text-underline-offset: 0.3em;
@@ -625,7 +635,7 @@ a:hover {
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--color-text) 70%, transparent);
+  color: #574b42;
 }
 
 /* Sugestões */
@@ -950,7 +960,6 @@ a:hover {
 .site-footer__credit-logo:hover,
 .site-footer__credit-logo:focus-visible {
   color: #fff;
-  outline: none;
 }
 
 .site-footer__credit-name {
@@ -964,7 +973,6 @@ a:hover {
 .site-footer__credit-name:hover,
 .site-footer__credit-name:focus-visible {
   color: #fff;
-  outline: none;
 }
 
 .devplus-mark {
@@ -1015,7 +1023,7 @@ a:hover {
 }
 
 .is-zoomable:focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--color-secondary);
   outline-offset: 3px;
 }
 
@@ -1133,7 +1141,6 @@ html.lightbox-open body {
   background: #e4c078;
   border-color: #e4c078;
   color: #1c140e;
-  outline: none;
 }
 
 .lightbox__btn--prev {
@@ -1343,8 +1350,8 @@ html::-webkit-scrollbar-thumb { background: #aa8b60; border-radius: 8px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 @media (max-width: 40rem) {
-  .back-top { width: 3.5rem; height: 4rem; }
-  .back-top svg { width: 52px; height: 58px; }
+  .back-top { width: 3rem; height: 3.4rem; }
+  .back-top svg { width: 44px; height: 49px; }
 }
 
 /* Revelar cada elemento quando entra na zona visível. */

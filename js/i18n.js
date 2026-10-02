@@ -120,7 +120,7 @@
         if (lang === currentLang) return;
         const change = () => {
           setLang(lang);
-          btn.parentElement?.querySelector("[data-lang-btn]:not(.is-active)")?.focus({ preventScroll: true });
+          btn.focus({ preventScroll: true });
         };
         if (window.CafeLanguageTransition) window.CafeLanguageTransition(change);
         else change();

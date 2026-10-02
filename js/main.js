@@ -64,7 +64,8 @@
     if (!hero) return;
     const img = document.querySelector("[data-hero-img]");
     if (img) {
-      img.src = hero.image;
+      // Foto em ecrã inteiro com object-fit: cover; num ecrã mais estreito que 16:9 é a altura que manda.
+      window.CafeImagens.apply(img, hero.image, "(max-aspect-ratio: 16/9) 176vh, 100vw");
       img.alt = localized(hero.alt);
       img.loading = "eager";
       img.fetchPriority = "high";
@@ -160,7 +161,7 @@
       media.className = "suggestion-card__media";
       if (item.image) {
         const img = document.createElement("img");
-        img.src = item.image;
+        window.CafeImagens.apply(img, item.image, "(min-width: 64rem) 30vw, (min-width: 40rem) 45vw, 85vw");
         img.alt = localized(item.name);
         img.loading = "lazy";
         img.decoding = "async";
@@ -226,9 +227,9 @@
         figure.appendChild(video);
       } else {
         const img = document.createElement("img");
-        img.src = item.src;
+        window.CafeImagens.apply(img, item.src, index === 0 ? "(min-width: 40rem) 66vw, 100vw" : "(min-width: 40rem) 33vw, 50vw");
         img.alt = localized(item.alt);
-        img.loading = index < previewCount ? "eager" : "lazy";
+        img.loading = "lazy";
         img.decoding = "async";
         img.width = 800;
         img.height = 600;

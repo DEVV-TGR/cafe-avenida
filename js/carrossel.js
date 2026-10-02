@@ -1,12 +1,11 @@
 /**
  * Carrossel automático no telemóvel: ida até ao fim, volta atrás, e repete.
  * Galeria mais rápida; sugestões e opiniões mais lentas.
- * Depois de tocares ou dares scroll, retoma sozinho.
+ * Assim que o visitante toca ou faz scroll, para de vez (WCAG 2.2.2): quem está a ler não perde o texto.
  */
 (function () {
   const MQ = "(max-width: 39.99rem)";
   const END_DWELL = 520;
-  const RESUME_AFTER = 2200;
   const TRACKS = [
     { selector: "[data-suggestions]", speed: 24 },
     { selector: "[data-reviews]", speed: 24 },
@@ -32,11 +31,8 @@
       pos: 0,
       last: 0,
       dwellUntil: 0,
-      userHold: false,
-      fingerDown: false,
-      resumeTimer: 0,
+      stopped: false,
       writing: false,
-      sawLightbox: false,
     };
 
     function maxScroll() {
@@ -47,74 +43,24 @@
       el.classList.toggle("is-auto-scrolling", on);
     }
 
-    function resume() {
-      state.fingerDown = false;
-      state.userHold = false;
-      state.pos = el.scrollLeft;
-      state.last = performance.now();
-      state.resumeTimer = 0;
-    }
-
-    function armResume() {
-      window.clearTimeout(state.resumeTimer);
-      if (state.fingerDown || lightboxOpen()) {
-        state.resumeTimer = 0;
-        return;
-      }
-      state.resumeTimer = window.setTimeout(resume, RESUME_AFTER);
-    }
-
-    function pauseForUser() {
-      state.userHold = true;
+    function stopForUser() {
+      state.stopped = true;
       setAuto(false);
-      armResume();
     }
 
-    function onFingerDown() {
-      state.fingerDown = true;
-      pauseForUser();
-    }
-
-    function onFingerUp() {
-      if (!state.fingerDown) return;
-      state.fingerDown = false;
-      pauseForUser();
-    }
-
-    el.addEventListener("pointerdown", onFingerDown);
-    el.addEventListener("touchstart", onFingerDown, { passive: true });
-    window.addEventListener("pointerup", onFingerUp);
-    window.addEventListener("pointercancel", onFingerUp);
-    window.addEventListener("touchend", onFingerUp, { passive: true });
-    window.addEventListener("touchcancel", onFingerUp, { passive: true });
-
-    el.addEventListener(
-      "wheel",
-      () => {
-        pauseForUser();
-      },
-      { passive: true }
-    );
+    el.addEventListener("pointerdown", stopForUser);
+    el.addEventListener("touchstart", stopForUser, { passive: true });
+    el.addEventListener("wheel", stopForUser, { passive: true });
+    el.addEventListener("focusin", stopForUser);
 
     return {
       step(now) {
-        const lightbox = lightboxOpen();
-        if (lightbox) state.sawLightbox = true;
-        if (state.sawLightbox && !lightbox) {
-          state.sawLightbox = false;
-          resume();
-        }
-
-        if (state.userHold && !state.fingerDown && !state.resumeTimer && !lightbox) {
-          armResume();
-        }
-
         const can =
           mq.matches &&
           !prefersReduced() &&
-          !state.userHold &&
+          !state.stopped &&
           !document.hidden &&
-          !lightbox &&
+          !lightboxOpen() &&
           inView(el);
 
         if (!can) {

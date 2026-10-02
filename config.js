@@ -5,7 +5,7 @@
 window.CAFE_CONFIG = {
   name: "Café Avenida",
   logo: {
-    src: "images/logo.png",
+    src: "images/logo-320.png",
     alt: "Café Avenida",
   },
   areaLabel: {
@@ -45,7 +45,12 @@ window.CAFE_CONFIG = {
     },
   },
   /** Domínio público do site (sem barra final) — usado em QR codes e meta tags */
-  domain: "https://NOME_DO_DOMINIO.example",
+  domain: "https://avenidacafe.pt",
+  /** Imagem de partilha 1200×630 (gerada por scripts/otimizar-imagens.mjs a partir do hero). */
+  shareImage: "images/partilha.jpg",
+  /** Dados para o Google (JSON-LD): gama de preços e tipo de cozinha. */
+  priceRange: "€",
+  servesCuisine: "Portuguesa",
   social: {
     instagram: "https://www.instagram.com/cafeavenidasnack/",
     facebook: "https://www.facebook.com/AvenidaCafeBar/",

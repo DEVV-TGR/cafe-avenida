@@ -2,7 +2,9 @@
 
 Site estático do **Café Avenida** (Alpendurada · Marco de Canaveses) — HTML, CSS e JavaScript vanilla, sem framework.
 
-O conteúdo do estabelecimento vive em **`config.js`**, **`menu.json`** e **`images/`**. Serve para GitHub Pages ou Netlify sem passo de build.
+O conteúdo do estabelecimento vive em **`config.js`**, **`menu.json`** e **`images/`**. Não há passo de build: publica-se a raiz tal como está.
+
+**Produção:** [avenidacafe.pt](https://avenidacafe.pt), alojado no Vercel.
 
 **Local:** Av. Francisco Sá Carneiro 760, 4575-052 Alpendurada e Matos · **Tel.:** 255 619 414
 
@@ -11,12 +13,13 @@ O conteúdo do estabelecimento vive em **`config.js`**, **`menu.json`** e **`ima
 ## Funcionalidades
 
 - Página principal com hero a ecrã inteiro, sobre nós, galeria, sugestões, opiniões Google, localização e ligação à ementa
-- Ementa bilingue (PT/EN) com categorias comprimíveis, pensada para telemóvel e QR nas mesas
+- Ementa em português, inglês e francês, com categorias comprimíveis, pensada para telemóvel e QR nas mesas
 - Galeria com mosaico editorial no desktop, carrossel no telemóvel e lightbox
 - Opiniões e classificação Google (atualizadas à mão em `config.js`)
 - Horário com estado **Aberto agora** / **Fechado** (fuso `Europe/Lisbon`, incluindo fecho após meia-noite)
 - Mapa ilustrado da zona (SVG gerado a partir do OpenStreetMap)
-- Transições entre páginas, header em ilha e tipografia própria (Cormorant + Manrope)
+- Transições entre páginas (a entrada animada aparece uma vez por sessão), header em ilha e tipografia própria (Cormorant, Lora e Manrope, alojadas em `fonts/`)
+- Imagens em WebP com vários tamanhos (`images/web/`), escolhidas pelo browser conforme o ecrã
 - QR codes para a ementa (`qr/` + cartão imprimível)
 
 ---
@@ -41,14 +44,20 @@ Abre [http://localhost:5173](http://localhost:5173). O Vite só serve em desenvo
 ├── ementa.html         # Ementa (telemóvel / QR)
 ├── qr-print.html       # Cartão imprimível com QR
 ├── config.js           # Nome, morada, horário, cores, media, reviews, domínio
-├── menu.json           # Categorias e itens da ementa (pt/en)
-├── i18n/               # Textos da interface (pt.js, en.js)
-├── css/                # Estilos
+├── menu.json           # Categorias e itens da ementa (pt/en/fr)
+├── i18n/               # Textos da interface (pt.js, en.js, fr.js)
+├── css/                # Estilos (fontes.css declara as fontes locais)
+├── fonts/              # Fontes woff2 (latin e latin-ext)
 ├── js/                 # i18n, horário, mapa, galeria, ementa, SEO…
-├── images/             # Fotos, vídeos e logo
+│   └── imagens-lista.js  # Gerado: versões WebP de cada imagem
+├── images/             # Fotos originais, logótipos, ícones e imagem de partilha
+│   └── web/            # Gerado: WebP em vários tamanhos
 ├── mapa/               # SVG ilustrado da zona
-├── scripts/            # QR codes e regeneração do mapa (Node)
-└── qr/                 # QR gerados (SVG + PNG)
+├── scripts/            # QR codes, imagens e mapa (Node)
+├── qr/                 # QR gerados (SVG + PNG)
+├── robots.txt, sitemap.xml
+├── vercel.json         # Sem build, cabeçalhos de segurança e cache, www → domínio principal
+└── .vercelignore       # O que fica no repositório mas não é publicado
 ```
 
 ---
@@ -79,13 +88,22 @@ Textos fixos da UI (botões, secções, acessibilidade) em `i18n/pt.js` e `i18n/
 
 ### Imagens — `images/`
 
-Substituir ficheiros ou apontar novos caminhos em `config.js`. Preferir JPG/WebP razoáveis para a web; o hero e a galeria usam lazy-load onde faz sentido.
+Substituir ficheiros ou apontar novos caminhos em `config.js` / `menu.json` e depois gerar as versões leves:
+
+```bash
+npm install
+npm run imagens
+```
+
+O script cria `images/web/*.webp` (480/960/1600 px; 240/480 px nas fotos da ementa), `images/logo-320.png`, a imagem de partilha `images/partilha.jpg` (1200×630), os ícones e `js/imagens-lista.js`. Os originais ficam intactos.
+
+As imagens ficam 30 dias em cache no browser: ao trocar uma foto, usar um **nome de ficheiro novo** em vez de substituir o antigo.
 
 ---
 
 ## Idioma (PT / EN)
 
-- Seletor no header (bandeira + código).
+- Português, inglês e francês. Seletor no header (bandeira + código), com o idioma atual marcado.
 - Primeira visita: idioma do browser; fallback **PT**.
 - Preferência guardada em `localStorage`.
 - Forçar via URL: `?lang=pt` ou `?lang=en` (ex.: `ementa.html?lang=en`).
@@ -108,7 +126,7 @@ Saída em `mapa/alpendurada.svg`. A posição do pin ajusta-se em `config.js` �
 
 ## QR codes
 
-1. Definir `domain` em `config.js`.
+1. `domain` em `config.js` (atualmente `https://avenidacafe.pt`).
 2. Gerar:
 
 ```bash
@@ -125,18 +143,20 @@ Ficheiros em `qr/` (`ementa`, `ementa-pt`, `ementa-en` em SVG/PNG). Para imprimi
 
 ## Publicar
 
-- **GitHub Pages:** Settings → Pages → branch `main`, pasta `/ (root)`.
-- **Netlify / similar:** ligar o repositório ou arrastar a pasta; **sem comando de build**.
-- **Vercel:** importar o repositório; o `vercel.json` já desliga o build do Vite e publica a raiz (e repete os cabeçalhos do `_headers`).
+- **Vercel (produção):** cada push para o `main` do repositório ligado ao projeto publica o site. O `vercel.json` desliga o build do Vite, publica a raiz, define os cabeçalhos de segurança e de cache e redireciona `www.avenidacafe.pt` para `avenidacafe.pt`. O `.vercelignore` deixa de fora testes, scripts, documentação e ficheiros sem uso.
+- **Domínio:** `avenidacafe.pt` e `www.avenidacafe.pt` configurados em Vercel → Settings → Domains (DNS no registo do domínio).
+- **Voltar atrás:** Vercel → Deployments → escolher uma versão anterior → *Instant Rollback*.
+- **Netlify / GitHub Pages:** também funcionam sem build (`_headers` e `_redirects` são para o Netlify).
 
-Antes de publicar, preencher em `config.js` o `domain`, email e links das redes sociais (ainda há placeholders de exemplo).
+Ao mudar o domínio: atualizar `domain` em `config.js`, as tags `canonical`/`og:` no `<head>` de `index.html` e `ementa.html`, `robots.txt`, `sitemap.xml` e regenerar os QR.
 
 ---
 
 ## Segurança
 
-- **CSP:** cada página tem a mesma `<meta http-equiv="Content-Security-Policy">`. Não usar scripts inline nem `onclick=`: o código vai para `js/`. Ao alterar um `<style>` inline (ou o script do `<base>` no `404.html`), o hash na CSP tem de mudar — `npm test` indica o valor certo.
-- **Cabeçalhos HTTP:** `_headers` aplica HSTS, proteção contra clickjacking, `nosniff`, Referrer-Policy e Permissions-Policy **só no Netlify**. O GitHub Pages não permite cabeçalhos próprios; aí só vale a CSP da `<meta>`.
+- **CSP:** cada página tem a mesma `<meta http-equiv="Content-Security-Policy">`, sem terceiros (as fontes são locais). Não usar scripts inline nem `onclick=`: o código vai para `js/`. Ao alterar um `<style>` inline (ou o script do `<base>` no `404.html`), o hash na CSP tem de mudar — `npm test` indica o valor certo.
+- **Cabeçalhos HTTP:** HSTS, proteção contra clickjacking, `nosniff`, Referrer-Policy e Permissions-Policy vêm do `vercel.json` (Vercel) ou do `_headers` (Netlify).
+- **Privacidade:** sem cookies, analytics nem pedidos a terceiros; o `localStorage` guarda só o idioma escolhido.
 - **Testes:** `npm test` (sem dependências) verifica CSP, cabeçalhos, escaping da ementa, segredos nos ficheiros publicados e terceiros. Corre também no GitHub Actions (`.github/workflows/seguranca.yml`) com `npm audit`.
 - **Tudo o que está no repositório é público** (o repositório e o site): nunca guardar aqui chaves, palavras-passe ou dados pessoais.
 
@@ -154,6 +174,10 @@ Antes de publicar, preencher em `config.js` o `domain`, email e links das redes 
 
 Site desenvolvido para o Café Avenida · [DevPlus](https://github.com/adriano2212)
 
+
+## Textos
+
+O site trata o visitante por **você** (ex.: “Não sabe o que escolher?”, “Consulte a ementa”). Manter este registo em textos novos.
 
 ## Sugestões e idiomas
 

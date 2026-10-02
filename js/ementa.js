@@ -85,7 +85,7 @@
     const figs = category.figures
       .map(
         (src) =>
-          `<span class="menu-figura"><span class="menu-figura__foto"><img src="${esc(src)}" alt="" loading="lazy" decoding="async" /></span></span>`
+          `<span class="menu-figura"><span class="menu-figura__foto"><img src="${esc(window.CafeImagens.best(src, 240))}" srcset="${esc(window.CafeImagens.srcset(src))}" sizes="7rem" alt="" loading="lazy" decoding="async" /></span></span>`
       )
       .join("");
     return `<div class="menu-section__figuras" aria-hidden="true">${figs}</div>`;
@@ -189,8 +189,8 @@
       }
     }
 
+    // Sem aria-label: o nome do botão continua a ser o da categoria; o estado vai no aria-expanded.
     head.setAttribute("aria-expanded", collapsed ? "false" : "true");
-    head.setAttribute("aria-label", collapsed ? i18n.t("menuPage.expand") : i18n.t("menuPage.collapse"));
   }
 
   function bindCollapse() {
@@ -270,9 +270,37 @@
     };
   }
 
+  /** Sem ligação (ex.: rede fraca à mesa), explica o que aconteceu e deixa tentar de novo. */
+  function showLoadError() {
+    const sections = document.querySelector("[data-menu-sections]");
+    if (!sections) return;
+    const box = document.createElement("div");
+    box.className = "menu-erro";
+    box.setAttribute("role", "alert");
+    const text = document.createElement("p");
+    text.textContent = i18n.t("menuPage.loadError");
+    const retry = document.createElement("button");
+    retry.type = "button";
+    retry.className = "menu-erro__botao";
+    retry.textContent = i18n.t("menuPage.retry");
+    retry.addEventListener("click", () => {
+      box.remove();
+      loadMenu();
+    });
+    box.append(text, retry);
+    sections.replaceChildren(box);
+  }
+
   async function loadMenu() {
-    const res = await fetch("menu.json", { cache: "no-cache" });
-    menuData = await res.json();
+    try {
+      const res = await fetch("menu.json", { cache: "no-cache" });
+      if (!res.ok) throw new Error(`menu.json: HTTP ${res.status}`);
+      menuData = await res.json();
+    } catch (error) {
+      console.error(error);
+      showLoadError();
+      return;
+    }
     renderMenu();
     if (location.hash) {
       requestAnimationFrame(() => {
@@ -303,7 +331,8 @@
     loadMenu();
 
     window.addEventListener("cafe:langchange", () => {
-      renderMenu();
+      if (menuData) renderMenu();
+      else if (document.querySelector(".menu-erro")) showLoadError();
       window.CafeSeo.applyPageMeta(cfg, i18n, "menu");
       window.CafeBarra?.init();
       window.CafeBranding?.apply(cfg);

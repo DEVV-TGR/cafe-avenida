@@ -201,7 +201,7 @@ body[data-page="ementa"] .pg-barra {
 }
 
 .menu-section__head:focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--color-secondary);
   outline-offset: 4px;
   border-radius: 4px;
 }
@@ -572,6 +572,49 @@ body[data-page="ementa"] .pg-barra {
   width: min(100%, 25rem);
   height: auto;
   opacity: .9;
+}
+
+.menu-signature__legal {
+  margin: 1.5rem 0 0;
+  font-size: 0.85rem;
+}
+
+.menu-signature__legal a {
+  color: var(--color-espresso);
+}
+
+/* Nota sobre alergénios, logo no início da ementa. */
+.menu-intro__alergenios {
+  max-width: 34rem;
+  margin: 0.75rem auto 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #574b42;
+}
+
+/* Ementa sem ligação: mensagem e botão para tentar de novo. */
+.menu-erro {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.menu-erro p {
+  margin: 0;
+  max-width: 28rem;
+}
+
+.menu-erro__botao {
+  padding: 0.7rem 1.4rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-primary) 18%, transparent);
+  color: var(--color-secondary);
+  font: 700 0.85rem/1 var(--font-sans);
+  cursor: pointer;
 }
 
 .menu-item { scroll-margin-top: calc(var(--menu-nav-top) + 6rem); }

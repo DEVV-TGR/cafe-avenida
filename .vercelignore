@@ -1,0 +1,27 @@
+# Ficheiros do repositório que não fazem parte do site: o Vercel não os publica.
+# O site em si é a raiz (HTML, css/, js/, i18n/, fonts/, images/, mapa/, qr/, config.js, menu.json).
+
+# Documentação, testes e ferramentas de desenvolvimento
+README.md
+tests/
+scripts/
+node_modules/
+package.json
+package-lock.json
+vite.config.js
+.gitignore
+.github/
+_headers
+_redirects
+preview-mobile.html
+
+# Dados de origem e maquetas (não usados pelas páginas)
+data/
+qrcodes/
+images/ementa/CREDITOS.md
+
+# Originais pesados que o site já não carrega (as páginas usam images/web/ e images/logo-320.png)
+images/logo.png
+images/logo-linha.png
+images/1e9433cf-54d8-4264-912c-4081ec58ff68.MP4
+images/B7FF8837-20B4-4AE6-82DA-53414FDCAA4B.png

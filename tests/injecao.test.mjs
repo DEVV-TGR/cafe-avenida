@@ -14,7 +14,7 @@ async function desenharEmenta(menu) {
   const nav = elementoFalso("nav");
   const seccoes = elementoFalso("div");
   const elementos = { "[data-menu-nav]": nav, "[data-menu-sections]": seccoes };
-  executar(["js/ementa.js"], {
+  executar(["js/imagens.js", "js/ementa.js"], {
     document: {
       readyState: "complete",
       documentElement: elementoFalso("html"),
@@ -26,7 +26,7 @@ async function desenharEmenta(menu) {
     CAFE_CONFIG: { colors: {}, phone: "", phoneDisplay: "" },
     CafeI18n: { getLang: () => "pt", t: (chave) => chave, init() {} },
     CafeSeo: { applyPageMeta() {} },
-    fetch: async () => ({ json: async () => menu }),
+    fetch: async () => ({ ok: true, json: async () => menu }),
     addEventListener() {},
     matchMedia: () => ({ matches: true }),
     requestAnimationFrame: (fn) => fn(),

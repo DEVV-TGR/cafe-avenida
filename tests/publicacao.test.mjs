@@ -74,7 +74,7 @@ test("config.js: contactos sem endereços de exemplo e ligações só por HTTPS"
 });
 
 test("páginas só carregam recursos externos de origens aprovadas", () => {
-  const permitidos = new Set(["fonts.googleapis.com", "fonts.gstatic.com"]);
+  const permitidos = new Set(); // tudo é servido pelo próprio site
   for (const pagina of PAGINAS) {
     const html = lerPagina(pagina);
     const recursos = [

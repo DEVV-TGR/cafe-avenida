@@ -1,11 +1,11 @@
 window.__i18n = window.__i18n || {};
 window.__i18n.pt = {
-  chooser: {"open": "Não sabes o que escolher?", "question": "O que te apetece?", "sweet": "Doce", "snack": "Snack", "meal": "Refeição", "drink": "Bebida", "try": "Experimenta isto", "another": "Outra sugestão", "menu": "Ver na ementa", "empty": "Novas sugestões a chegar em breve.", "close": "Fechar sugestões"},
+  chooser: {"open": "Não sabe o que escolher?", "question": "O que lhe apetece?", "sweet": "Doce", "snack": "Snack", "meal": "Refeição", "drink": "Bebida", "try": "Experimente isto", "another": "Outra sugestão", "menu": "Ver na ementa", "empty": "Novas sugestões a chegar em breve.", "close": "Fechar sugestões"},
   meta: {
-    homeTitle: "Início",
-    homeDescription: "Café local — boa comida, café e ambiente acolhedor.",
+    homeTitle: "Café e refeições em Alpendurada, Marco de Canaveses",
+    homeDescription: "Café, pequenos-almoços, refeições e petiscos em Alpendurada, Marco de Canaveses. Consulte a ementa, o horário e como chegar.",
     menuTitle: "Ementa",
-    menuDescription: "Consulte a nossa ementa — cafés, pastelaria, tostas e bebidas.",
+    menuDescription: "Ementa do Café Avenida, em Alpendurada: entradas, pratos, snacks e pizzas, sobremesas, pastelaria, cafetaria e bebidas, com preços.",
   },
   nav: {language: "Idioma",
     backTop: "Voltar ao topo",
@@ -36,7 +36,7 @@ window.__i18n.pt = {
   },
   about: {
     mainRoom: "Salão principal",
-    mainRoomText: "O espaço que vês na galeria, para um café, uma refeição ou uma boa conversa.",
+    mainRoomText: "O espaço que vê na galeria, para um café, uma refeição ou uma boa conversa.",
     terrace: "Esplanada exterior",
     terraceText: "Uma pausa ao ar livre, para saborear o momento sem pressa.",
     games: "Salão de jogos",
@@ -100,6 +100,7 @@ window.__i18n.pt = {
     rights: "Todos os direitos reservados.",
     menuQr: "Ementa digital",
     madeBy: "Site feito pela",
+    complaints: "Livro de Reclamações",
   },
   error: {
     docTitle: "Página não encontrada",
@@ -112,7 +113,10 @@ window.__i18n.pt = {
   menuPage: {categories: "Categorias da ementa",
     title: "Ementa",
     subtitle: "Toque numa categoria para navegar",
-    comingSoon: "Do primeiro café à sobremesa, escolhe o que te apetece.",
+    comingSoon: "Do primeiro café à sobremesa, escolha o que lhe apetece.",
+    allergens: "Se tiver alguma alergia ou intolerância alimentar, peça a informação sobre alergénios ao balcão.",
+    loadError: "Não foi possível carregar a ementa. Verifique a ligação à internet e tente novamente.",
+    retry: "Tentar novamente",
     sizes: { small: "Pequena", medium: "Média" },
     sizesShort: { small: "PQ", medium: "MD" },
     tags: {

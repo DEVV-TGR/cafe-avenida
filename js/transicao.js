@@ -7,6 +7,9 @@
 (function () {
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const NAV_KEY = "ca-nav-transition";
+  const SEEN_KEY = "ca-entrada-vista";
+  /** Se a página demorou a carregar, a animação de entrada só atrasaria mais o visitante. */
+  const SLOW_LOAD_MS = 2500;
 
   let navigating = false;
   let activeTimer = null;
@@ -138,7 +141,7 @@
       veil.append(edge);
     }
     const logo = document.createElement('img');
-    logo.src = window.CAFE_CONFIG?.logo?.src || 'images/logo.png';
+    logo.src = window.CAFE_CONFIG?.logo?.src || 'images/logo-320.png';
     logo.alt = '';
     logo.className = 'ca-tr__logo';
     const frame = document.createElement('div');
@@ -166,6 +169,15 @@
   function isHistoryNavigation() {
     const nav = performance.getEntriesByType("navigation")[0];
     return nav?.type === "back_forward";
+  }
+
+  /** A entrada animada aparece uma vez por sessão (por página); nas visitas seguintes a página abre logo. */
+  function entrySeen(page) {
+    try {
+      const seen = sessionStorage.getItem(`${SEEN_KEY}:${page}`) === "1";
+      sessionStorage.setItem(`${SEEN_KEY}:${page}`, "1");
+      return seen;
+    } catch { return false; }
   }
 
   function readNavFlag() {
@@ -278,6 +290,12 @@
     }
 
     if (isHistoryNavigation()) {
+      finishOverlay(overlay);
+      return;
+    }
+
+    // As transições entre páginas (flag) continuam; só a entrada direta é poupada.
+    if (!nav && (entrySeen(page) || performance.now() > SLOW_LOAD_MS)) {
       finishOverlay(overlay);
       return;
     }

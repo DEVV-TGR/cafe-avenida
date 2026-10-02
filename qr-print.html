@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- CSP igual em todas as páginas. Ao mudar um script ou style inline, atualizar o hash (npm test indica o valor). -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-UuVM8p71BA9Kre17rHIaD76AwMLpbaKZAKGHR6FE+7Q='; style-src 'self' https://fonts.googleapis.com 'sha256-Ajhk23fZ/O+42Xb4A6mV7RCoS/L4wUE6a3+m+ADX2sQ=' 'sha256-8/xuEuKmb/1Mau2P1hluRIImozaxZXvftmdO2NNPHHs=' 'sha256-ye3fPO5XKg75LzBJV/no4GfmoebCxgmd7D+JdbBt1ww='; font-src https://fonts.gstatic.com; img-src 'self'; media-src 'self'; connect-src 'self'; frame-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-UuVM8p71BA9Kre17rHIaD76AwMLpbaKZAKGHR6FE+7Q='; style-src 'self' 'sha256-HqDtAA8wr8+J/JUcXodcUhW/EESbhXfztJKtn5ge9GM=' 'sha256-XsSZxe6rB4MU4+xA5a2U37n7aKCHgb+SAC0ivrB5+w4=' 'sha256-ye3fPO5XKg75LzBJV/no4GfmoebCxgmd7D+JdbBt1ww='; font-src 'self'; img-src 'self'; media-src 'self'; connect-src 'self'; frame-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="robots" content="noindex" />
     <title>QR — Ementa</title>
+    <link rel="icon" href="favicon.ico" sizes="32x32" />
     <link rel="stylesheet" href="css/qr-print.css" />
   </head>
   <body>
@@ -15,7 +17,7 @@
     </p>
 
     <article class="print-sheet" id="qr-card">
-      <img class="print-logo" data-logo src="images/logo.png" alt="Café Avenida" width="527" height="535" />
+      <img class="print-logo" data-logo src="images/logo-320.png" alt="Café Avenida" width="527" height="535" />
       <h1 class="visually-hidden" data-config="name">Café Avenida</h1>
       <p class="bilingual"><span data-i18n="qrPrint.menuLabel">Ementa</span> / Menu</p>
       <img id="qr-image" src="qr/ementa-pt.png" alt="QR code ementa" width="512" height="512" />

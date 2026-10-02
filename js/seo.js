@@ -2,6 +2,25 @@
  * Meta tags dinâmicas e JSON-LD CafeOrCoffeeShop.
  */
 (function () {
+  const LOCALES = { pt: "pt_PT", en: "en_GB", fr: "fr_FR" };
+
+  function setLink(rel, href) {
+    let el = document.querySelector(`link[rel="${rel}"]:not([hreflang])`);
+    if (!el) {
+      el = document.createElement("link");
+      el.rel = rel;
+      document.head.appendChild(el);
+    }
+    el.href = href;
+  }
+
+  /** URL público da página: com ?lang= só quando o visitante escolheu um idioma (como no hreflang). */
+  function pageUrl(cfg, isMenu) {
+    const path = isMenu ? "/ementa.html" : "/";
+    const lang = new URLSearchParams(window.location.search).get("lang");
+    return lang ? `${cfg.domain}${path}?lang=${encodeURIComponent(lang)}` : `${cfg.domain}${path}`;
+  }
+
   function setMeta(name, content, attr) {
     if (!content) return;
     const key = attr || "name";
@@ -43,7 +62,12 @@
       telephone: cfg.phone,
       email: cfg.email?.trim() || undefined,
       url: cfg.domain,
-      image: cfg.domain + "/" + (cfg.logo?.src || cfg.media?.hero?.image),
+      image: `${cfg.domain}/${cfg.shareImage || cfg.media?.hero?.image}`,
+      logo: cfg.logo?.src ? `${cfg.domain}/${cfg.logo.src}` : undefined,
+      hasMenu: `${cfg.domain}/ementa.html`,
+      priceRange: cfg.priceRange || undefined,
+      servesCuisine: cfg.servesCuisine || undefined,
+      sameAs: Object.values(cfg.social || {}).filter(Boolean),
       address: {
         "@type": "PostalAddress",
         streetAddress: cfg.address.street,
@@ -71,8 +95,11 @@
     setMeta("og:title", title, "property");
     setMeta("og:description", desc, "property");
     setMeta("og:type", "website", "property");
-    setMeta("og:url", window.location.href, "property");
-    const ogImage = cfg.logo?.src || cfg.media?.hero?.image;
+    const url = pageUrl(cfg, isMenu);
+    setMeta("og:url", url, "property");
+    setLink("canonical", url);
+    setMeta("og:locale", LOCALES[i18n.getLang()], "property");
+    const ogImage = cfg.shareImage || cfg.media?.hero?.image;
     if (ogImage) {
       setMeta("og:image", `${cfg.domain}/${ogImage}`, "property");
     }

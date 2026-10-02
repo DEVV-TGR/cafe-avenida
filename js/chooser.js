@@ -22,7 +22,7 @@
       previous = item;
       if (item.image) {
         const image = document.createElement('img');
-        image.src = item.image; image.alt = local(item.name); image.className = 'chooser__image';
+        window.CafeImagens.apply(image, item.image, '(min-width: 40rem) 22rem, 80vw'); image.alt = local(item.name); image.className = 'chooser__image';
         image.decoding = 'async';
         result.append(image);
       }

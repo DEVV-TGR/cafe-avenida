@@ -4,15 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- CSP igual em todas as páginas. Ao mudar um script ou style inline, atualizar o hash (npm test indica o valor). -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-UuVM8p71BA9Kre17rHIaD76AwMLpbaKZAKGHR6FE+7Q='; style-src 'self' https://fonts.googleapis.com 'sha256-Ajhk23fZ/O+42Xb4A6mV7RCoS/L4wUE6a3+m+ADX2sQ=' 'sha256-8/xuEuKmb/1Mau2P1hluRIImozaxZXvftmdO2NNPHHs=' 'sha256-ye3fPO5XKg75LzBJV/no4GfmoebCxgmd7D+JdbBt1ww='; font-src https://fonts.gstatic.com; img-src 'self'; media-src 'self'; connect-src 'self'; frame-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-UuVM8p71BA9Kre17rHIaD76AwMLpbaKZAKGHR6FE+7Q='; style-src 'self' 'sha256-HqDtAA8wr8+J/JUcXodcUhW/EESbhXfztJKtn5ge9GM=' 'sha256-XsSZxe6rB4MU4+xA5a2U37n7aKCHgb+SAC0ivrB5+w4=' 'sha256-ye3fPO5XKg75LzBJV/no4GfmoebCxgmd7D+JdbBt1ww='; font-src 'self'; img-src 'self'; media-src 'self'; connect-src 'self'; frame-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <style id="ca-critical">
       html.ca-loading {
         background: #dad2c6;
         overflow: hidden;
+        animation: ca-rede 0s 3.5s forwards;
       }
       html.ca-loading body > :not(#ca-transicao) {
-        visibility: hidden !important;
+        visibility: hidden;
+        animation: ca-rede 0s 3.5s forwards;
+      }
+      html.ca-loading #ca-transicao {
+        animation: ca-rede-tapa 0s 3.5s forwards;
+      }
+      @keyframes ca-rede {
+        to {
+          overflow: visible;
+          visibility: visible;
+        }
+      }
+      @keyframes ca-rede-tapa {
+        to {
+          visibility: hidden;
+        }
       }
       #ca-transicao {
         position: fixed;
@@ -27,15 +43,36 @@
     <link rel="stylesheet" href="css/transicao.css" />
     <script src="js/movimento-reduzido.js"></script>
     <meta name="theme-color" content="#DAD2C6" />
-    <title>Ementa — Café Avenida</title>
-    <link rel="icon" href="images/logo.png" type="image/png" />
-    <meta name="description" content="Ementa digital" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Lora:ital,wght@0,500;1,500&family=Manrope:wght@400..700&display=swap"
-      rel="stylesheet"
+    <title>Café Avenida — Ementa</title>
+    <meta
+      name="description"
+      content="Ementa do Café Avenida, em Alpendurada: entradas, pratos, snacks e pizzas, sobremesas, pastelaria, cafetaria e bebidas, com preços."
     />
+    <link rel="canonical" href="https://avenidacafe.pt/ementa.html" />
+    <link rel="alternate" hreflang="pt-PT" href="https://avenidacafe.pt/ementa.html?lang=pt" />
+    <link rel="alternate" hreflang="en" href="https://avenidacafe.pt/ementa.html?lang=en" />
+    <link rel="alternate" hreflang="fr" href="https://avenidacafe.pt/ementa.html?lang=fr" />
+    <link rel="alternate" hreflang="x-default" href="https://avenidacafe.pt/ementa.html" />
+    <!-- Partilha (WhatsApp, Facebook…): os robots das redes não correm JavaScript, por isso estas tags têm de estar no HTML. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Café Avenida" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:title" content="Café Avenida — Ementa" />
+    <meta
+      property="og:description"
+      content="Ementa do Café Avenida, em Alpendurada: entradas, pratos, snacks e pizzas, sobremesas, pastelaria, cafetaria e bebidas, com preços."
+    />
+    <meta property="og:url" content="https://avenidacafe.pt/ementa.html" />
+    <meta property="og:image" content="https://avenidacafe.pt/images/partilha.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sala do Café Avenida com mesas de madeira e candeeiros suspensos" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="images/icone-180.png" />
+    <link rel="preload" href="fonts/manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="css/fontes.css" />
     <link rel="stylesheet" href="css/barra.css" />
     <link rel="stylesheet" href="css/ementa.css" />
   </head>
@@ -48,7 +85,7 @@
         <div class="ca-tr__soleira" aria-hidden="true"></div>
         <div class="ca-tr__logo-vao">
           <div class="ca-tr__logo-slot">
-            <img class="ca-tr__logo" src="" alt="" width="160" height="160" data-src="images/logo.png" />
+            <img class="ca-tr__logo" src="" alt="" width="160" height="160" data-src="images/logo-320.png" />
           </div>
         </div>
         <div class="ca-tr__vidro ca-tr__vidro--esq" aria-hidden="true">
@@ -68,7 +105,7 @@
           </div>
           <div class="ca-panfleto__folha ca-panfleto__folha--meio">
             <p class="ca-panfleto__marca">Café Avenida</p>
-            <img class="ca-panfleto__selo" src="images/logo.png" alt="" width="64" height="64" />
+            <img class="ca-panfleto__selo" src="images/logo-320.png" alt="" width="64" height="64" />
             <p class="ca-panfleto__titulo">Ementa</p>
             <div class="ca-panfleto__linhas">
               <span></span><span></span><span></span><span></span><span></span><span></span>
@@ -89,7 +126,7 @@
 
     <header class="pg-barra">
       <a class="pg-barra__marca" href="index.html">
-        <img data-logo src="images/logo.png" alt="Café Avenida" width="527" height="535" />
+        <img data-logo src="images/logo-320.png" alt="Café Avenida" width="527" height="535" />
       </a>
 
       <nav class="pg-indice" data-i18n-attr="aria-label:nav.main" aria-label="Navegação principal">
@@ -139,15 +176,34 @@
       <div class="menu-intro">
         <p class="section__eyebrow menu-intro__eyebrow" data-config="name">Café Avenida</p>
         <h2 class="menu-intro__title" data-i18n="menuPage.title">Ementa</h2>
-        <p class="menu-intro__notice" data-i18n="menuPage.comingSoon">Do primeiro café à sobremesa, escolhe o que te apetece.</p>
+        <p class="menu-intro__notice" data-i18n="menuPage.comingSoon">Do primeiro café à sobremesa, escolha o que lhe apetece.</p>
+        <p class="menu-intro__alergenios" data-i18n="menuPage.allergens">
+          Se tiver alguma alergia ou intolerância alimentar, peça a informação sobre alergénios ao balcão.
+        </p>
       </div>
       <div class="menu-sections" id="menu-sections" data-menu-sections></div>
       <footer class="menu-signature">
-        <img src="images/logo-linha.png" alt="Café Avenida" width="2200" height="637" loading="lazy" decoding="async" />
+        <img
+          src="images/web/logo-linha-600.webp"
+          srcset="images/web/logo-linha-600.webp 600w, images/web/logo-linha-1200.webp 1200w"
+          sizes="(min-width: 40rem) 22rem, 70vw"
+          alt="Café Avenida"
+          width="2200"
+          height="637"
+          loading="lazy"
+          decoding="async"
+        />
+        <p class="menu-signature__legal">
+          <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer" data-i18n="footer.complaints"
+            >Livro de Reclamações</a
+          >
+        </p>
       </footer>
     </main>
 
     <script src="config.js"></script>
+    <script src="js/imagens-lista.js"></script>
+    <script src="js/imagens.js"></script>
     <script src="js/branding.js"></script>
     <script src="i18n/pt.js"></script>
     <script src="i18n/en.js"></script>

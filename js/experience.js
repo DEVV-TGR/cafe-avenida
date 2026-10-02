@@ -7,6 +7,9 @@
     const footer = document.querySelector('.site-footer');
     if (!header || !hero || !topButton) return;
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const narrow = window.matchMedia('(max-width: 40rem)');
+    let lastY = window.scrollY;
+    let goingDown = false;
     const links = [...document.querySelectorAll('[data-section-hash]')];
     const sections = links.map(link => ({ link, section: document.querySelector(link.dataset.sectionHash) })).filter(item => item.section);
     let queued = false;
@@ -30,7 +33,9 @@
         if (item === current) item.link.setAttribute('aria-current', 'location');
         else item.link.removeAttribute('aria-current');
       }
-      topButton.hidden = !passedHero;
+      // No telemóvel o botão só aparece ao subir a página, para não tapar texto e botões enquanto se lê.
+      if (Math.abs(scrollY - lastY) > 4) { goingDown = scrollY > lastY; lastY = scrollY; }
+      topButton.hidden = !passedHero || (narrow.matches && goingDown && document.activeElement !== topButton);
       // Compensar a parte visível do rodapé, conservando a margem do botão.
       const footerOverlap = footer ? Math.max(0, innerHeight - footer.getBoundingClientRect().top) : 0;
       topButton.style.setProperty('--footer-offset', `${footerOverlap}px`);

@@ -6,10 +6,8 @@ import assert from "node:assert/strict";
 import { PAGINAS, blocosInline, cspDaPagina, diretivas, hashCsp, ler, lerPagina } from "./ajudantes.mjs";
 
 const FONTES_PROIBIDAS = ["'unsafe-eval'", "'unsafe-inline'", "'unsafe-hashes'", "*", "http:", "https:", "data:", "blob:"];
-const TERCEIROS_PERMITIDOS = {
-  "style-src": ["https://fonts.googleapis.com"],
-  "font-src": ["https://fonts.gstatic.com"],
-};
+/** Sem terceiros: as fontes passaram a estar alojadas no próprio site. */
+const TERCEIROS_PERMITIDOS = {};
 
 const csps = Object.fromEntries(PAGINAS.map((p) => [p, cspDaPagina(lerPagina(p))]));
 

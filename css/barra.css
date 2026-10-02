@@ -183,8 +183,12 @@ body[data-page="home"] .pg-barra {
   transition: background-color 220ms ease, border-color 220ms ease;
 }
 
+/* Idioma atual visível e marcado (antes ficava escondido). */
 .pg-barra__idioma .lang-switch button.is-active {
-  display: none;
+  background: color-mix(in srgb, var(--color-primary) 30%, #fff 30%);
+  border-color: var(--color-primary);
+  box-shadow: inset 0 0 0 1px var(--color-primary);
+  cursor: default;
 }
 
 .pg-barra__idioma .lang-switch button img {
@@ -284,6 +288,9 @@ body[data-page="home"] .pg-barra {
   }
 
   .pg-barra__idioma .lang-switch button {
+    justify-content: center;
+    min-width: 1.75rem;
+    min-height: 1.75rem;
     padding: 0.28rem;
     gap: 0;
   }
@@ -397,6 +404,8 @@ body[data-page="home"] .pg-barra {
   }
 
   .pg-barra__idioma .lang-switch button {
+    min-width: 1.6rem;
+    min-height: 1.6rem;
     padding: 0.22rem;
     gap: 0;
   }

@@ -32,7 +32,7 @@
       <div class="lightbox__backdrop" data-lightbox-close>
         <img class="lightbox__ambience" alt="" aria-hidden="true" />
       </div>
-      <img class="lightbox__brand" src="images/logo-linha.png" alt="Café Avenida" width="2200" height="637" />
+      <img class="lightbox__brand" src="images/web/logo-linha-600.webp" alt="Café Avenida" width="2200" height="637" />
       <figure class="lightbox__figure">
         <img class="lightbox__img" alt="" />
         <figcaption class="lightbox__caption">
@@ -86,11 +86,11 @@
     const item = items[index];
     root.classList.remove("is-ready");
     const ready = () => {
-      ambience.src = item.src;
+      ambience.src = window.CafeImagens?.best(item.src, 480) ?? item.src;
       root.classList.add("is-ready");
     };
     img.onload = ready;
-    img.src = item.src;
+    img.src = window.CafeImagens?.best(item.src, 1600) ?? item.src;
     img.alt = item.alt || "";
     if (img.complete && img.naturalWidth) ready();
     caption.textContent = item.alt || "";
@@ -107,7 +107,7 @@
       (visible || closeBtn).focus();
     }
     [items[index + 1], items[index - 1]].forEach((n) => {
-      if (n) new Image().src = n.src;
+      if (n) new Image().src = window.CafeImagens?.best(n.src, 1600) ?? n.src;
     });
   }
 

@@ -2,10 +2,10 @@ window.__i18n = window.__i18n || {};
 window.__i18n.en = {
   chooser: {"open": "Not sure what to choose?", "question": "What are you in the mood for?", "sweet": "Sweet", "snack": "Snack", "meal": "Meal", "drink": "Drink", "try": "Give this a try", "another": "Another suggestion", "menu": "View on the menu", "empty": "New suggestions coming soon.", "close": "Close suggestions"},
   meta: {
-    homeTitle: "Home",
-    homeDescription: "Local café — good food, coffee and a welcoming atmosphere.",
+    homeTitle: "Café and meals in Alpendurada, Marco de Canaveses",
+    homeDescription: "Coffee, breakfast, meals and snacks in Alpendurada, Marco de Canaveses. See the menu, opening hours and directions.",
     menuTitle: "Menu",
-    menuDescription: "Browse our menu — coffee, pastries, toasts and drinks.",
+    menuDescription: "Café Avenida menu in Alpendurada: starters, mains, snacks and pizzas, desserts, pastries, coffee and drinks, with prices.",
   },
   nav: {language: "Language",
     backTop: "Back to top",
@@ -100,6 +100,7 @@ window.__i18n.en = {
     rights: "All rights reserved.",
     menuQr: "Digital menu",
     madeBy: "Site made by",
+    complaints: "Complaints Book (Livro de Reclamações)",
   },
   error: {
     docTitle: "Page not found",
@@ -113,6 +114,9 @@ window.__i18n.en = {
     title: "Menu",
     subtitle: "Tap a category to browse",
     comingSoon: "From your first coffee to dessert, choose what you fancy.",
+    allergens: "If you have a food allergy or intolerance, please ask at the counter for allergen information.",
+    loadError: "We couldn't load the menu. Please check your internet connection and try again.",
+    retry: "Try again",
     sizes: { small: "Small", medium: "Medium" },
     sizesShort: { small: "S", medium: "M" },
     tags: {

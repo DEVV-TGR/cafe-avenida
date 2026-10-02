@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <!-- CSP igual em todas as páginas. Ao mudar um script ou style inline, atualizar o hash (npm test indica o valor). -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-UuVM8p71BA9Kre17rHIaD76AwMLpbaKZAKGHR6FE+7Q='; style-src 'self' https://fonts.googleapis.com 'sha256-Ajhk23fZ/O+42Xb4A6mV7RCoS/L4wUE6a3+m+ADX2sQ=' 'sha256-8/xuEuKmb/1Mau2P1hluRIImozaxZXvftmdO2NNPHHs=' 'sha256-ye3fPO5XKg75LzBJV/no4GfmoebCxgmd7D+JdbBt1ww='; font-src https://fonts.gstatic.com; img-src 'self'; media-src 'self'; connect-src 'self'; frame-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-UuVM8p71BA9Kre17rHIaD76AwMLpbaKZAKGHR6FE+7Q='; style-src 'self' 'sha256-HqDtAA8wr8+J/JUcXodcUhW/EESbhXfztJKtn5ge9GM=' 'sha256-XsSZxe6rB4MU4+xA5a2U37n7aKCHgb+SAC0ivrB5+w4=' 'sha256-ye3fPO5XKg75LzBJV/no4GfmoebCxgmd7D+JdbBt1ww='; font-src 'self'; img-src 'self'; media-src 'self'; connect-src 'self'; frame-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <script>
       /* GitHub Pages: assets must resolve from site root on nested 404 URLs */
@@ -17,13 +17,9 @@
     <meta name="theme-color" content="#DAD2C6" />
     <meta name="robots" content="noindex" />
     <title>Página não encontrada — Café Avenida</title>
-    <link rel="icon" href="images/logo.png" type="image/png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" href="favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="images/icone-180.png" />
+    <link rel="stylesheet" href="css/fontes.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/erro.css" />
   </head>
@@ -33,10 +29,10 @@
 
       <div class="erro__cartao">
         <a class="erro__marca" href="index.html" data-i18n-attr="aria-label:error.home">
-          <img class="erro__logo" data-logo src="images/logo.png" alt="Café Avenida" width="96" height="96" />
+          <img class="erro__logo" data-logo src="images/logo-320.png" alt="Café Avenida" width="96" height="96" />
           <img
             class="erro__wordmark"
-            src="images/logo-linha.png"
+            src="images/web/logo-linha-600.webp"
             alt=""
             width="440"
             height="127"
